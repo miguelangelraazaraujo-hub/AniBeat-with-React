@@ -8,6 +8,7 @@ import Home from './pages/home/Home'
 import News from './pages/news/News'
 import Contact from './pages/contact/Contact'
 import Privacy from './pages/privacy/Privacy';
+import Cookies from './pages/cookies/Cookies';
 import SaleConditions from './pages/sale-conditions/SaleConditions';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='*' element={<Home />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/privacy' element={<Privacy />} />
+          <Route path='/cookies' element={<Cookies />} />
           <Route path='/sales-conditions' element={<SaleConditions />} />
         </Routes>
       </BrowserRouter>

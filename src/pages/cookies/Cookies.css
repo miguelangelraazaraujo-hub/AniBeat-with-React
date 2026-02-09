@@ -1,0 +1,146 @@
+.cookies-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #121212;
+  color: #cccccc;
+}
+
+/* Sidebar */
+.cookies-sidebar {
+  width: 260px;
+  background-color: #1a1a2e;
+  padding: 30px 20px 40px;
+  border-right: 1px solid #333344;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #4d9eff;
+}
+
+.toc-list {
+  list-style: none;
+}
+
+.toc-item {
+  margin-bottom: 12px;
+}
+
+.toc-link {
+  display: block;
+  padding: 10px 16px;
+  color: #cccccc;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.toc-link:hover {
+  background-color: rgba(77, 158, 255, 0.1);
+  color: #4d9eff;
+}
+
+.toc-link.active {
+  background-color: rgba(77, 158, 255, 0.2);
+  color: #4d9eff;
+  font-weight: 600;
+  border-left: 3px solid #4d9eff;
+}
+
+/* Main Content */
+.cookies-main-content {
+  flex: 1;
+  padding: 40px 40px 80px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-title {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.page-meta {
+  color: #aaa;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+.page-meta a {
+  color: #4d9eff;
+  text-decoration: none;
+}
+
+.section {
+  margin-bottom: 40px;
+  scroll-margin-top: 80px;
+}
+
+.section h2 {
+  color: #ffffff;
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #4d9eff;
+  border-radius: 2px;
+}
+
+.section h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin: 24px 0 12px;
+}
+
+.section p,
+.section li {
+  margin-bottom: 16px;
+}
+
+.section ul {
+  padding-left: 24px;
+}
+
+.highlight {
+  background: rgba(77, 158, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #4d9eff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cookies-container {
+    flex-direction: column;
+  }
+
+  .cookies-sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid #333344;
+  }
+
+  .cookies-main-content {
+    padding: 20px 16px;
+  }
+}
