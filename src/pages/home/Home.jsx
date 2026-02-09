@@ -7,7 +7,7 @@ function Home() {
     const navigate = useNavigate();
 
     const handClick = () => {
-        navigate("/Contacts");
+        navigate("/Contact");
     }
 
     return(
