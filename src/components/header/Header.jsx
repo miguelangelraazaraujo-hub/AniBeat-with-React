@@ -57,20 +57,6 @@ const Header = () => {
             ],
           },
           {
-            id: 'clasificaciones',
-            label: 'clasificaciones',
-            submenu: [
-              { text: 'global', isHeader: true },
-              { text: 'países' },
-              { text: 'mejores jugadas' },
-              { text: 'equipos' },
-              { text: 'listas de juego' },
-              { text: 'partidas rápidas' },
-              { text: 'desafío diario' },
-              { text: 'kudosu' },
-            ],
-          },
-          {
             id: 'comunidad',
             label: 'comunidad',
             submenu: [
@@ -80,15 +66,6 @@ const Header = () => {
               { text: 'torneos' },
               { text: 'transmisiones en vivo' },
               { text: 'desarrollo' },
-            ],
-          },
-          {
-            id: 'tienda',
-            label: 'tienda',
-            submenu: [
-              { text: 'productos', isHeader: true },
-              { text: 'carrito' },
-              { text: 'historial de pedidos' },
             ],
           },
           {

@@ -1,8 +1,9 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
-function Mapa({ lat = 28.1235, lng = -15.4363, zoom = 13 }) {
+function Mapa({ lat = 28.1235, lng = -15.4363, zoom = 18 }) {
   return (
     <MapContainer
+      key={zoom}
       center={[lat, lng]}
       zoom={zoom}
       style={{ height: '100%', width: '100%' }}
