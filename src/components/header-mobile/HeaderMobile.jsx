@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './HeaderMobile.css';
+import IdiomSelector from '../idiom-selector/IdiomSelector';
+import 'https://kit.fontawesome.com/0df28cef70.js'
 
 const HeaderMobile = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -99,6 +101,9 @@ const HeaderMobile = () => {
                 )}
               </div>
             ))}
+            
+            <IdiomSelector isMobile={true} />
+            
           </div>
         </nav>
       )}

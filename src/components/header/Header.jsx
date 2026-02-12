@@ -1,5 +1,6 @@
 import "./Header.css";
 import React, { useRef, useEffect, useState } from 'react';
+import IdiomSelector from '../idiom-selector/IdiomSelector';
 
 const Header = () => {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -118,6 +119,7 @@ const Header = () => {
             <path d="M12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path>
           </svg>
         </button>
+        <IdiomSelector />
         <button className="header-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M20 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0z"></path>

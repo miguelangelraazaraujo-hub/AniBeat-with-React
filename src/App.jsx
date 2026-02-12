@@ -4,6 +4,7 @@ import { useState } from 'react'
 //import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'leaflet/dist/leaflet.css';
+import './i18n'
 import Home from './pages/home/Home'
 import News from './pages/news/News'
 import Contact from './pages/contact/Contact'
