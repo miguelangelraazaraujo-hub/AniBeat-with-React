@@ -7,6 +7,7 @@ import 'leaflet/dist/leaflet.css';
 import './i18n'
 import Home from './pages/home/Home'
 import News from './pages/news/News'
+import NewsDetail from './pages/news-detail/NewsDetail'
 import Contact from './pages/contact/Contact'
 import Privacy from './pages/privacy/Privacy';
 import Cookies from './pages/cookies/Cookies';
@@ -26,6 +27,7 @@ function App() {
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/cookies' element={<Cookies />} />
           <Route path='/sales-conditions' element={<SaleConditions />} />
+          <Route path="/news/:id" element={<NewsDetail />} />
         </Routes>
       </BrowserRouter>
     </>

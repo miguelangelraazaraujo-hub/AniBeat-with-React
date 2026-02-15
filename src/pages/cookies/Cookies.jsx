@@ -78,7 +78,7 @@ const Cookies = () => {
                         Última actualización: <strong>10 de febrero de 2026</strong>
                         <br />
                         URL:{' '}
-                        <a href="https://www.anibeat.com" target="_blank" rel="noopener noreferrer">
+                        <a href="/home" target="_blank" rel="noopener noreferrer">
                             https://www.anibeat.com
                         </a>
                     </div>

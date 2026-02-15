@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "title": "osu!taiko World Cup 2026: Registrations Now Open!",
+    "title": "Lanzamiento oficial de la plataforma",
     "date": "2026-02-13",
-    "description": "The osu!taiko World Cup 2026 is back with a slew of exciting changes!",
-    "image": "/src/assets/img/news/news.jpg",
+    "description": "Hoy presentamos oficialmente la nueva plataforma. Este lanzamiento incluye múltiples funcionalidades nuevas, mejoras en el rendimiento y una interfaz rediseñada.",
+    "image": "/src/assets/img/news/News.jpg",
     "author": "AniBeat Team"
   },
   {
     "id": 2,
-    "title": "Battle of the Box 2026: Waifu Cup – Registrations Now Open!",
+    "title": "Nuevo modo GuessTheBeat",
     "date": "2026-02-12",
-    "description": "The flagship tournament by xootynator is back! Join the race to win the Waifu Circuit, and claim the Waifu Cup!",
-    "image": "/src/assets/img/news/news.jpg",
+    "description": "Añadimos nuevas categorías al modo GuessTheBeat, incluyendo autor, letra y anime. También mejoramos el sistema de puntuación.",
+    "image": "/src/assets/img/news/News2.jpg",
     "author": "xootynator"
   },
   {
     "id": 3,
-    "title": "osu!mania 7K World Cup 2026: Quarterfinals Recap",
+    "title": "Actualización del sistema de usuarios",
     "date": "2026-02-09",
-    "description": "This is the beginning of the end! As the tournament reaches its halfway point, the very first osu! originals make their appearance in the tournament.",
-    "image": "/src/assets/img/news/news.jpg",
+    "description": "Se han añadido estadísticas personalizadas, logros desbloqueables y mejoras en la seguridad de las cuentas.",
+    "image": "/src/assets/img/news/News3.jpg",
     "author": "AniBeat Team"
   }
 ]

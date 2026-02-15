@@ -53,6 +53,9 @@ function Home() {
                             {newBeatmaps.map(item => (
                                 <SidebarItems key={item.id} item={item} />
                             ))}
+                            <a href="">
+                                ver más
+                            </a>
                         </div>
                     </div>
 
@@ -62,6 +65,9 @@ function Home() {
                             {popularBeatmaps.map(item => (
                                 <SidebarItems key={item.id} item={item} />
                             ))}
+                            <a href="">
+                                ver más
+                            </a>
                         </div>
                     </div>
                 </aside>

@@ -57,7 +57,7 @@ const HeaderMobile = () => {
     <header className="header-mobile">
       <div className="header-mobile-top">
         <div className="header-mobile-logo">
-          <div className="logo-circle">AniBeat</div>
+          <div className="logo-circle-mobile">AniBeat</div>
         </div>
         <button
           className="header-mobile-hamburger"

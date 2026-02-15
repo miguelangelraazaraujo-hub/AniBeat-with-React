@@ -6,11 +6,9 @@ const Header = () => {
   const [showOverlay, setShowOverlay] = useState(false);
   const menuRef = useRef(null);
 
-  // Detectar si el mouse está dentro del menú o sus submenús
   const handleMouseEnter = () => setShowOverlay(true);
   const handleMouseLeave = () => setShowOverlay(false);
 
-  // Para evitar que el overlay desaparezca al pasar entre menú y submenú
   useEffect(() => {
     const handler = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
@@ -31,7 +29,7 @@ const Header = () => {
 
       {/* Logo */}
       <div className="header-logo">
-        <a href="/home"><div className="logo-circle">AniBeat</div></a>
+        <a href="/home" className="header-logo-link"><div className="logo-circle">AniBeat</div></a>
       </div>
 
       {/* Navigation */}
@@ -40,49 +38,54 @@ const Header = () => {
           {
             id: 'inicio',
             label: 'inicio',
+            url: '/home',
             submenu: [
-              { text: 'novedades', isHeader: true },
-              { text: 'equipo' },
-              { text: 'búsqueda' },
+              { text: 'novedades', url: '/news', isHeader: true },
+              { text: 'equipo', url: '/team' },
+              { text: 'búsqueda', url: '/search' },
             ],
           },
           {
             id: 'canciones',
             label: 'canciones',
+            url: '/songs',
             submenu: [
-              { text: 'lista de canciones', isHeader: true },
-              { text: 'artistas destacados' },
-              { text: 'mi biblioteca' },
+              { text: 'lista de canciones', url: '/songs', isHeader: true },
+              { text: 'artistas destacados', url: '/artists' },
+              { text: 'mi biblioteca', url: '/library' },
             ],
           },
           {
             id: 'GuessTheBeat',
             label: 'GuessTheBeat',
+            url: '/guess-game',
             submenu: [
-              { text: 'cancion', isHeader: true },
-              { text: 'autor' },
-              { text: 'letra' },
-              { text: 'anime' },
+              { text: 'cancion', url: '/guess-by-song', isHeader: true },
+              { text: 'cantante', url: '/guess-by-singer' },
+              { text: 'letra', url: '/guess-by-lyrics' },
+              { text: 'anime', url: '/guess-by-anime' },
             ],
           },
           {
             id: 'comunidad',
             label: 'comunidad',
+            url: '/community',
             submenu: [
-              { text: 'foro', isHeader: true },
-              { text: 'chat' },
-              { text: 'concursos' },
+              { text: 'foro', url: '/forum', isHeader: true },
+              { text: 'chat', url: '/chat' },
+              { text: 'concursos', url: '/contest' },
             ],
           },
           {
             id: 'ayuda',
             label: 'ayuda',
+            url: '/help',
             submenu: [
-              { text: 'wiki', isHeader: true },
-              { text: 'preguntas frecuentes' },
-              { text: 'reglas' },
-              { text: 'reportar abuso' },
-              { text: 'no, en serio, ¡necesito ayuda!' },
+              { text: 'wiki', url: '/wiki', isHeader: true },
+              { text: 'preguntas frecuentes', url: '/faq' },
+              { text: 'reglas', url: '/rules' },
+              { text: 'reportar abuso', url: '/report' },
+              { text: 'no, en serio, ¡necesito ayuda!', url: '/help-centre' },
             ],
           },
         ].map((item) => (
@@ -92,17 +95,18 @@ const Header = () => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <span className="nav-link">{item.label}</span>
+            <a href={item.url} className="nav-link">{item.label}</a>
 
             {/* Submenu */}
             <div className="submenu">
               {item.submenu.map((subItem, idx) => (
-                <div
+                <a
                   key={idx}
-                  className={`submenu-item ${subItem.isHeader ? 'submenu-item--header' : ''}`}
+                  href={subItem.url}
+                  className={`submenu-item ${subItem.isHeader ? 'submenu-item-header' : ''}`}
                 >
                   {subItem.text}
-                </div>
+                </a>
               ))}
             </div>
           </div>

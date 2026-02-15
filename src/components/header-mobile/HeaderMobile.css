@@ -19,7 +19,7 @@
   margin-left: 10px;
 }
 
-.logo-circle {
+.logo-circle-mobile {
   width: 40px;
   height: 40px;
   border: 2px solid #4d9eff;
@@ -31,7 +31,6 @@
   font-size: 14px;
   color: #ffffff;
   background: #1a1a2e;
-  text-decoration: none;
 }
 
 .header-mobile-hamburger {
