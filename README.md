@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://www.anibeat.com">
-    <img src="src/assets/img/AniBeat.png" alt="AniBeat Logo" width="120" height="120">
+    <img src="src/assets/AniBeat.png" alt="AniBeat Logo" width="120" height="120">
   </a>
 
   <h3 align="center">AniBeat</h3>
