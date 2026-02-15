@@ -10,14 +10,14 @@
   <p align="center">
     A modern, community-driven platform for anime music lovers — inspired by osu!, AniList, and Spotify Wrapped.
     <br />
-    <a href="https://github.com/your-username/anibeat"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/miguelangelraazaraujo-hub/AniBeat-with-React"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://www.anibeat.com">View Demo</a>
     ·
-    <a href="https://github.com/your-username/anibeat/issues">Report Bug</a>
+    <a href="https://github.com/miguelangelraazaraujo-hub/AniBeat-with-React/issues">Report Bug</a>
     ·
-    <a href="https://github.com/your-username/anibeat/issues">Request Feature</a>
+    <a href="https://github.com/miguelangelraazaraujo-hub/AniBeat-with-React/issues">Request Feature</a>
   </p>
 </div>
 
@@ -100,7 +100,7 @@ To run AniBeat locally:
 ### Installation
 1. Clone the repo
    ```sh
-   git clone https://github.com/your-username/anibeat.git
+   git clone https://github.com/miguelangelraazaraujo-hub/AniBeat-with-React.git
 
 2. Install dependencies
     npm install
@@ -115,6 +115,6 @@ To run AniBeat locally:
 
 ### Contact
 Have questions or want to collaborate? Reach out!
-- Project Link: https://github.com/your-username/anibeat
+- Project Link: https://github.com/miguelangelraazaraujo-hub/AniBeat-with-React.git
 - Website: https://www.anibeat.com
 Made with ❤️ for the anime and rhythm game community.
