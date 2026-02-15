@@ -55,7 +55,7 @@ const Cookies = () => {
             <div className="cookies-container">
                 {/* Sidebar: Índice */}
                 <aside className="cookies-sidebar">
-                    <h2 className="sidebar-title">Contenidos</h2>
+                    <h2 className="cookies-sidebar-title">Contenidos</h2>
                     <ul className="toc-list">
                         {tocItems.map((item) => (
                             <li key={item.id} className="toc-item">

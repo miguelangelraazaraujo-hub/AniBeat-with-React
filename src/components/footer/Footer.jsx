@@ -51,40 +51,45 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer-container">
-                {/* Top Row: Images + Map + Contact */}
+                {/* Top Row: Links + Map + Contact */}
                 <div className="footer-row">
-                    {/* Left: Flickr-style images */}
+                    {/* Left: Links */}
                     <div className="footer-section">
-                        <h3 className="footer-title">See all our pictures on flickr</h3>
+                        <h3 className="footer-title">Contents</h3>
                         <div className="footer-links-grid">
                             <div className="footer-grid-column">
-                                <h3 className="footer-grid-title">inicio</h3>
+                                <h3 className="footer-grid-title"><a href="/home" className="footer-grid-title">inicio</a></h3>
                                 <ul className="footer-grid-links">
-                                    <li><a href="/novedades" className="footer-grid-link">novedades</a></li>
-                                    <li><a href="/equipo" className="footer-grid-link">equipo</a></li>
-                                    <li><a href="/registro-de-cambios" className="footer-grid-link">registro de cambios</a></li>
-                                    <li><a href="/descarga" className="footer-grid-link">descarga</a></li>
-                                    <li><a href="/busqueda" className="footer-grid-link">búsqueda</a></li>
+                                    <li><a href="/news" className="footer-grid-link">novedades</a></li>
+                                    <li><a href="/team" className="footer-grid-link">equipo</a></li>
+                                    <li><a href="/search" className="footer-grid-link">búsqueda</a></li>
                                 </ul>
                             </div>
 
                             <div className="footer-grid-column">
-                                <h3 className="footer-grid-title">mapas</h3>
+                                <h3 className="footer-grid-title"><a href="/songs" className="footer-grid-title">canciones</a></h3>
                                 <ul className="footer-grid-links">
-                                    <li><a href="/lista-de-mapas" className="footer-grid-link">lista de mapas</a></li>
-                                    <li><a href="/artistas-destacados" className="footer-grid-link">artistas destacados</a></li>
-                                    <li><a href="/paquetes-de-mapas" className="footer-grid-link">paquetes de mapas</a></li>
+                                    <li><a href="/songs-list" className="footer-grid-link">lista de canciones</a></li>
+                                    <li><a href="/artists" className="footer-grid-link">artistas destacados</a></li>
+                                    <li><a href="/library" className="footer-grid-link">mi biblioteca</a></li>
+                                </ul>
+                            </div>
+
+                            <div className="footer-grid-column">
+                                <h3 className="footer-grid-title"><a href="/songs" className="footer-grid-title">canciones</a></h3>
+                                <ul className="footer-grid-links">
+                                    <li><a href="/songs-list" className="footer-grid-link">lista de canciones</a></li>
+                                    <li><a href="/artists" className="footer-grid-link">artistas destacados</a></li>
+                                    <li><a href="/library" className="footer-grid-link">mi biblioteca</a></li>
                                 </ul>
                             </div>
 
                             <div className="footer-grid-column">
                                 <h3 className="footer-grid-title">comunidad</h3>
                                 <ul className="footer-grid-links">
-                                    <li><a href="/foro" className="footer-grid-link">foro</a></li>
+                                    <li><a href="/forum" className="footer-grid-link">foro</a></li>
                                     <li><a href="/chat" className="footer-grid-link">chat</a></li>
-                                    <li><a href="/concursos" className="footer-grid-link">concursos</a></li>
-                                    <li><a href="/torneos" className="footer-grid-link">torneos</a></li>
-                                    <li><a href="/transmisiones" className="footer-grid-link">transmisiones en vivo</a></li>
+                                    <li><a href="/competitions" className="footer-grid-link">concursos</a></li>
                                 </ul>
                             </div>
 
@@ -92,10 +97,10 @@ function Footer() {
                                 <h3 className="footer-grid-title">ayuda</h3>
                                 <ul className="footer-grid-links">
                                     <li><a href="/wiki" className="footer-grid-link">wiki</a></li>
-                                    <li><a href="/preguntas-frecuentes" className="footer-grid-link">preguntas frecuentes</a></li>
-                                    <li><a href="/reglas" className="footer-grid-link">reglas</a></li>
-                                    <li><a href="/reportar-abuso" className="footer-grid-link">reportar abuso</a></li>
-                                    <li><a href="/ayuda-real" className="footer-grid-link">no, en serio, ¡necesito ayuda!</a></li>
+                                    <li><a href="/faq" className="footer-grid-link">preguntas frecuentes</a></li>
+                                    <li><a href="/rules" className="footer-grid-link">reglas</a></li>
+                                    <li><a href="/report" className="footer-grid-link">reportar abuso</a></li>
+                                    <li><a href="/help-center" className="footer-grid-link">no, en serio, ¡necesito ayuda!</a></li>
                                 </ul>
                             </div>
                         </div>

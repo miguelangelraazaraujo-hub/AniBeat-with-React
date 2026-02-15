@@ -1,0 +1,75 @@
+.sidebar-item {
+  display: grid;
+  font-size: 12px;
+  gap: 10px;
+}
+
+.sidebar-item-link {
+  color: hsl(var(--hsl-f1));
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 1fr auto;
+  margin: 0 calc(var(--padding-x) * -1);
+  padding: 0 var(--padding-x);
+  text-decoration: none;
+  transform: translateZ(0);
+  transition: .1s;
+}
+
+.sidebar-item-image {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  background-position: 50%;
+  background-size: cover;
+  border-radius: 6px;
+  flex: none;
+  height: 60px;
+  position: relative;
+  vertical-align: middle;
+  width: 70px;
+}
+
+.sidebar-item-meta {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  justify-content: center;
+  min-width: 0;
+}
+
+.sidebar-item-title-container {
+  display: inline-flex;
+}
+
+.u-ellipsis-overflow {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.sidebar-item-title {
+  font-size: 16px;
+  margin-top: -2px;
+}
+
+.sidebar-item-artist {
+  font-size: 12px;
+  margin-top: -3px;
+}
+
+.sidebar-item-creator {
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+.sidebar-item-time {
+  color: #a1a1a1;
+}
+
+.sidebar-item-chevron {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}

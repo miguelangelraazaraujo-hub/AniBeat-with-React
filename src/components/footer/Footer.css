@@ -8,7 +8,6 @@
 }
 
 .footer-container {
-  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -32,7 +31,7 @@
   font-size: 16px;
 }
 
-/* Images grid */
+/* Links grid */
 .footer-links-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -62,6 +61,7 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 12px;
+  text-decoration: none;
 }
 
 .footer-grid-links {
