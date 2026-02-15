@@ -43,12 +43,12 @@ function Home() {
                 {/* Columna lateral derecha */}
                 <aside className="home-sidebar">
                     <div className="sidebar-section">
-                        <h3 className="sidebar-title">Mapa del desafío diario</h3>
+                        <h3 className="sidebar-title">Canción del desafío diario</h3>
                         <SidebarItems item={dailyChallenge} />
                     </div>
 
                     <div className="sidebar-section">
-                        <h3 className="sidebar-title">Nuevos mapas clasificados</h3>
+                        <h3 className="sidebar-title">Nuevas canciones clasificadas</h3>
                         <div className="sidebar-item-list">
                             {newBeatmaps.map(item => (
                                 <SidebarItems key={item.id} item={item} />
@@ -60,7 +60,7 @@ function Home() {
                     </div>
 
                     <div className="sidebar-section">
-                        <h3 className="sidebar-title">Mapas populares</h3>
+                        <h3 className="sidebar-title">Canciones populares</h3>
                         <div className="sidebar-item-list">
                             {popularBeatmaps.map(item => (
                                 <SidebarItems key={item.id} item={item} />
