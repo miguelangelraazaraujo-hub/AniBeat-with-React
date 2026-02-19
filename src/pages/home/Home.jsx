@@ -9,6 +9,7 @@ import SidebarItems from '../../components/sidebar-items/SidebarItems';
 import dailyChallenge from '../../data/daily-challege.js';
 import newBeatmaps from '../../data/new-songs.js';
 import popularBeatmaps from '../../data/popular-songs.js';
+import { useTranslation } from 'react-i18next';
 
 function Home() {
     const navigate = useNavigate();
@@ -25,17 +26,19 @@ function Home() {
             .then(data => setNews(data));
     }, []);
 
+    const { t } = useTranslation();
+
     return (
         <>
             <Header />
             <HeaderMobile />
-            <p>Welcome page to the project AniBeat</p>
-            <button onClick={handClick}>Go to Contacts</button>
+            <p>{t('welcome-message')}</p>
+            <button onClick={handClick}>{t('go-to-contacts')}</button>
             <div className="home-page">
                 {/* Columna principal */}
                 <main className="home-main">
                     <section className="home-section">
-                        <h2 className="section-title">Novedades</h2>
+                        <h2 className="section-title">{t('novedades')}</h2>
                         <NewsList news={news} />
                     </section>
                 </main>
@@ -43,30 +46,30 @@ function Home() {
                 {/* Columna lateral derecha */}
                 <aside className="home-sidebar">
                     <div className="sidebar-section">
-                        <h3 className="sidebar-title">Canción del desafío diario</h3>
+                        <h3 className="sidebar-title">{t('cancion-desafio-diario')}</h3>
                         <SidebarItems item={dailyChallenge} />
                     </div>
 
                     <div className="sidebar-section">
-                        <h3 className="sidebar-title">Nuevas canciones clasificadas</h3>
+                        <h3 className="sidebar-title">{t('nuevas-canciones-clasificadas')}</h3>
                         <div className="sidebar-item-list">
                             {newBeatmaps.map(item => (
                                 <SidebarItems key={item.id} item={item} />
                             ))}
                             <a href="">
-                                ver más
+                                {t('ver-mas')}
                             </a>
                         </div>
                     </div>
 
                     <div className="sidebar-section">
-                        <h3 className="sidebar-title">Canciones populares</h3>
+                        <h3 className="sidebar-title">{t('canciones-populares')}</h3>
                         <div className="sidebar-item-list">
                             {popularBeatmaps.map(item => (
                                 <SidebarItems key={item.id} item={item} />
                             ))}
                             <a href="">
-                                ver más
+                                {t('ver-mas')}
                             </a>
                         </div>
                     </div>
