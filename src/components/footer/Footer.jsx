@@ -1,6 +1,7 @@
 import "./Footer.css";
 import Map from '../map/Map';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const socials = [
     {
@@ -48,6 +49,9 @@ const socials = [
 ];
 
 function Footer() {
+
+    const { t } = useTranslation();
+
     return (
         <footer className="footer">
             <div className="footer-container">
@@ -55,10 +59,10 @@ function Footer() {
                 <div className="footer-row">
                     {/* Left: Links */}
                     <div className="footer-section">
-                        <h3 className="footer-title">Contents</h3>
+                        <h3 className="footer-title">{t('contenidos')}</h3>
                         <div className="footer-links-grid">
                             <div className="footer-grid-column">
-                                <h3 className="footer-grid-title"><a href="/home" className="footer-grid-title">inicio</a></h3>
+                                <h3 className="footer-grid-title"><a href="/home" className="footer-grid-title">{t('inicio')}</a></h3>
                                 <ul className="footer-grid-links">
                                     <li><a href="/news" className="footer-grid-link">novedades</a></li>
                                     <li><a href="/team" className="footer-grid-link">equipo</a></li>
@@ -67,7 +71,7 @@ function Footer() {
                             </div>
 
                             <div className="footer-grid-column">
-                                <h3 className="footer-grid-title"><a href="/songs" className="footer-grid-title">canciones</a></h3>
+                                <h3 className="footer-grid-title"><a href="/songs" className="footer-grid-title">{t('canciones')}</a></h3>
                                 <ul className="footer-grid-links">
                                     <li><a href="/songs-list" className="footer-grid-link">lista de canciones</a></li>
                                     <li><a href="/artists" className="footer-grid-link">artistas destacados</a></li>
@@ -76,7 +80,7 @@ function Footer() {
                             </div>
 
                             <div className="footer-grid-column">
-                                <h3 className="footer-grid-title"><a href="/songs" className="footer-grid-title">canciones</a></h3>
+                                <h3 className="footer-grid-title"><a href="/songs" className="footer-grid-title">{t('guessr')}</a></h3>
                                 <ul className="footer-grid-links">
                                     <li><a href="/songs-list" className="footer-grid-link">lista de canciones</a></li>
                                     <li><a href="/artists" className="footer-grid-link">artistas destacados</a></li>
@@ -85,7 +89,7 @@ function Footer() {
                             </div>
 
                             <div className="footer-grid-column">
-                                <h3 className="footer-grid-title">comunidad</h3>
+                                <h3 className="footer-grid-title">{t('comunidad')}</h3>
                                 <ul className="footer-grid-links">
                                     <li><a href="/forum" className="footer-grid-link">foro</a></li>
                                     <li><a href="/chat" className="footer-grid-link">chat</a></li>
@@ -94,7 +98,7 @@ function Footer() {
                             </div>
 
                             <div className="footer-grid-column">
-                                <h3 className="footer-grid-title">ayuda</h3>
+                                <h3 className="footer-grid-title">{t('ayuda')}</h3>
                                 <ul className="footer-grid-links">
                                     <li><a href="/wiki" className="footer-grid-link">wiki</a></li>
                                     <li><a href="/faq" className="footer-grid-link">preguntas frecuentes</a></li>
@@ -108,16 +112,16 @@ function Footer() {
 
                     {/* Center: Map */}
                     <div className="footer-section">
-                        <h3 className="footer-title">Our Office</h3>
+                        <h3 className="footer-title">{t('ubicacion')}</h3>
                         <div className="footer-map">
                             <Map lat={28.12749828562955} lng={-15.44668665156636} zoom={18} />
                         </div>
-                        <p className="footer-map-caption">Get directions to our office</p>
+                        <p className="footer-map-caption">{t('mapa-details')}</p>
                     </div>
 
                     {/* Right: Contact */}
                     <div className="footer-section">
-                        <h3 className="footer-title">Contact Us</h3>
+                        <h3 className="footer-title">{t('contact')}</h3>
                         <address className="footer-contact">
                             <p>Calle del industrial Jose Sanchez Peñate, Las Palmas de Gran Canaria</p>
                             <p>Las Palmas, 35001</p>
@@ -151,9 +155,9 @@ function Footer() {
 
                 {/* Copyright */}
                 <div className="footer-copyright">
-                    &copy; {new Date().getFullYear()} AniBeat. All rights reserved ·{' '}
-                    <Link to="/cookies">Privacy and Cookies Policy</Link> |{' '}
-                    <Link to="/sales-conditions">Sale Conditions</Link>
+                    &copy; {new Date().getFullYear()} AniBeat. {t('derechos-reservados')} ·{' '}
+                    <Link to="/cookies">{t('privacidad-cookies')}</Link> |{' '}
+                    <Link to="/sales-conditions">{t('condiciones-venta')}</Link>
                 </div>
             </div>
         </footer>

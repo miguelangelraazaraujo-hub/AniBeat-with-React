@@ -6,46 +6,55 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 const resources = {
   es: {
     translation: {
-      // Menú principal
+      //HOME
       "inicio": "inicio",
-      "mapas": "mapas",
+      "novedades": "novedades",
+      "canciones": "canciones",
+      'guessr': 'GuessTheBeat',
       "comunidad": "comunidad",
       "ayuda": "ayuda",
-
-      // Home - Secciones principales
       "novedades": "Novedades",
       "cancion-desafio-diario": "Canción del desafío diario",
       "nuevas-canciones-clasificadas": "Nuevas canciones clasificadas",
       "canciones-populares": "Canciones populares",
-
-      // Enlaces y botones
       "ver-mas": "ver más",
-
-      // Otros textos (si los usas)
       "welcome-message": "Página de bienvenida del proyecto AniBeat",
-      "go-to-contacts": "Ir a Contacto"
+      "go-to-contacts": "Ir a Contacto",
+
+      //FOOTER
+      'contenidos': 'Contenidos',
+      'ubicacion': 'Nuestra oficina',
+      'contact': 'Contactanos',
+      'derechos-reservados': 'Todos los derechos reservados',
+      'privacidad-cookies': 'Política de privacidad y cookies',
+      'condiciones-venta': 'Condiciones de venta',
+      'mapa-details': 'Indicaciones a nuestra oficina',
     }
   },
   en: {
     translation: {
-      // Menú principal
+      //HOME
       "inicio": "home",
-      "mapas": "tracks",
+      "canciones": "tracks",
+      'guessr': 'GuessTheBeat',
       "comunidad": "community",
       "ayuda": "help",
-
-      // Home - Secciones principales
       "novedades": "News",
       "cancion-desafio-diario": "Daily Challenge Song",
       "nuevas-canciones-clasificadas": "Newly Ranked Songs",
       "canciones-populares": "Popular Songs",
-
-      // Enlaces y botones
       "ver-mas": "view more",
-
-      // Otros textos
       "welcome-message": "Welcome page to the project AniBeat",
-      "go-to-contacts": "Go to Contact"
+      "go-to-contacts": "Go to Contact",
+
+      //FOOTER
+      'contenidos': 'Contents',
+      'ubicacion': 'Our office',
+      'contact': 'Contact Us',
+      'derechos-reservados': 'All rights reserved',
+      'privacidad-cookies': 'Privacy and Cookies Policy',
+      'condiciones-venta': 'Sale Conditions',
+      'mapa-details': 'Get diretions to our office',
     }
   }
 };
