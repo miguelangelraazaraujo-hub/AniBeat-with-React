@@ -64,7 +64,7 @@ function Footer() {
                             <div className="footer-grid-column">
                                 <h3 className="footer-grid-title"><a href="/home" className="footer-grid-title">{t('inicio')}</a></h3>
                                 <ul className="footer-grid-links">
-                                    <li><a href="/news" className="footer-grid-link">novedades</a></li>
+                                    <li><a href="/news" className="footer-grid-link">{t('novedades')}</a></li>
                                     <li><a href="/rss" className="footer-grid-link">feed</a></li>
                                     <li><a href="/team" className="footer-grid-link">equipo</a></li>
                                     <li><a href="/search" className="footer-grid-link">búsqueda</a></li>

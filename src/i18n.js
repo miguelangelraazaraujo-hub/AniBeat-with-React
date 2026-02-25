@@ -6,14 +6,18 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 const resources = {
   es: {
     translation: {
-      //HOME
+      //GENERAL
       "inicio": "inicio",
       "novedades": "novedades",
+      "feed": "feed",
+      "team": "equipo",
+      "search": "búsqueda",
       "canciones": "canciones",
       'guessr': 'GuessTheBeat',
       "comunidad": "comunidad",
       "ayuda": "ayuda",
-      "novedades": "Novedades",
+
+      //HOME
       "cancion-desafio-diario": "Canción del desafío diario",
       "nuevas-canciones-clasificadas": "Nuevas canciones clasificadas",
       "canciones-populares": "Canciones populares",
@@ -33,13 +37,18 @@ const resources = {
   },
   en: {
     translation: {
-      //HOME
+      //GENERAL
       "inicio": "home",
+      "novedades": "News",
+      "feed": "feed",
+      "team": "team",
+      "search": "search",
       "canciones": "tracks",
       'guessr': 'GuessTheBeat',
       "comunidad": "community",
       "ayuda": "help",
-      "novedades": "News",
+
+      //HOME
       "cancion-desafio-diario": "Daily Challenge Song",
       "nuevas-canciones-clasificadas": "Newly Ranked Songs",
       "canciones-populares": "Popular Songs",
