@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './Cookies.css';
 import Header from '../../components/header/Header'
+import HeaderMobile from '../../components/header-mobile/HeaderMobile'
 import Footer from '../../components/footer/Footer'
 
 
@@ -52,6 +53,7 @@ const Cookies = () => {
     return (
         <>
             <Header />
+            <HeaderMobile />
             <div className="cookies-container">
                 {/* Sidebar: Índice */}
                 <aside className="cookies-sidebar">

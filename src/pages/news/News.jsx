@@ -12,7 +12,7 @@ const myArray = ['Apple', 'Banana', 'Cherry'];
 export default function News() {
 
     const getYear = (date) => new Date(date).getFullYear();
-    const getMonth = (date) => new Date(date).getMonth(); // 0-11
+    const getMonth = (date) => new Date(date).getMonth();
 
     const monthNames = [
         "Enero",

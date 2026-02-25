@@ -41,6 +41,7 @@ const Header = () => {
             url: '/home',
             submenu: [
               { text: 'novedades', url: '/news', isHeader: true },
+              { text: 'feed', url: '/rss' },
               { text: 'equipo', url: '/team' },
               { text: 'búsqueda', url: '/search' },
             ],

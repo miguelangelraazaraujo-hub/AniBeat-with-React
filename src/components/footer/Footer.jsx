@@ -65,6 +65,7 @@ function Footer() {
                                 <h3 className="footer-grid-title"><a href="/home" className="footer-grid-title">{t('inicio')}</a></h3>
                                 <ul className="footer-grid-links">
                                     <li><a href="/news" className="footer-grid-link">novedades</a></li>
+                                    <li><a href="/rss" className="footer-grid-link">feed</a></li>
                                     <li><a href="/team" className="footer-grid-link">equipo</a></li>
                                     <li><a href="/search" className="footer-grid-link">búsqueda</a></li>
                                 </ul>
@@ -82,14 +83,15 @@ function Footer() {
                             <div className="footer-grid-column">
                                 <h3 className="footer-grid-title"><a href="/songs" className="footer-grid-title">{t('guessr')}</a></h3>
                                 <ul className="footer-grid-links">
-                                    <li><a href="/songs-list" className="footer-grid-link">lista de canciones</a></li>
-                                    <li><a href="/artists" className="footer-grid-link">artistas destacados</a></li>
-                                    <li><a href="/library" className="footer-grid-link">mi biblioteca</a></li>
+                                    <li><a href="/songs-list" className="footer-grid-link">cancion</a></li>
+                                    <li><a href="/artists" className="footer-grid-link">cantante</a></li>
+                                    <li><a href="/library" className="footer-grid-link">letra</a></li>
+                                    <li><a href="/library" className="footer-grid-link">anime</a></li>
                                 </ul>
                             </div>
 
                             <div className="footer-grid-column">
-                                <h3 className="footer-grid-title">{t('comunidad')}</h3>
+                                <h3 className="footer-grid-title"><a href="/comunity" className="footer-grid-title">{t('comunidad')}</a></h3>
                                 <ul className="footer-grid-links">
                                     <li><a href="/forum" className="footer-grid-link">foro</a></li>
                                     <li><a href="/chat" className="footer-grid-link">chat</a></li>

@@ -1,7 +1,4 @@
 import { useState } from 'react'
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
-//import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'leaflet/dist/leaflet.css';
 import './i18n'
@@ -12,6 +9,7 @@ import Contact from './pages/contact/Contact'
 import Privacy from './pages/privacy/Privacy';
 import Cookies from './pages/cookies/Cookies';
 import SaleConditions from './pages/sale-conditions/SaleConditions';
+import Rss from './pages/rss/Rss';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,6 +26,7 @@ function App() {
           <Route path='/cookies' element={<Cookies />} />
           <Route path='/sales-conditions' element={<SaleConditions />} />
           <Route path="/news/:id" element={<NewsDetail />} />
+          <Route path="/rss" element={<Rss />} />
         </Routes>
       </BrowserRouter>
     </>

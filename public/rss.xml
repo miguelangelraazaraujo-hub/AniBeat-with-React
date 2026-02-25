@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Noticias - Mi Proyecto</title>
+    <link>https://misitio.com</link>
+    <description>Actualizaciones oficiales</description>
+    
+    <item>
+      <title>Lanzamiento oficial de la plataforma</title>
+      <link>https://misitio.com/news/1</link>
+      <description>Hoy presentamos oficialmente la nueva plataforma.</description>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Nuevo modo GuessTheBeat</title>
+      <link>https://misitio.com/news/2</link>
+      <description>Añadimos nuevas categorías al modo de juego.</description>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Actualización del sistema de usuarios</title>
+      <link>https://misitio.com/news/3</link>
+      <description>Mejoras en el sistema de perfiles.</description>
+      <pubDate>Thu, 02 May 2024 00:00:00 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Evento especial de verano</title>
+      <link>https://misitio.com/news/4</link>
+      <description>Celebramos el evento anual de verano.</description>
+      <pubDate>Thu, 20 Jul 2023 00:00:00 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Nuevo sistema de rankings</title>
+      <link>https://misitio.com/news/5</link>
+      <description>Implementamos rankings globales.</description>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
+    </item>
+  
+  </channel>
+</rss>

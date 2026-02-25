@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './SaleConditions.css';
 import Header from '../../components/header/Header';
+import HeaderMobile from '../../components/header-mobile/HeaderMobile';
 import Footer from '../../components/footer/Footer';
 
 const SaleConditions = () => {
@@ -52,6 +53,7 @@ const SaleConditions = () => {
   return (
     <>
       <Header />
+      <HeaderMobile />
       <div className="sale-conditions-container">
         {/* Sidebar: Índice */}
         <aside className="sale-conditions-sidebar">

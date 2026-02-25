@@ -21,34 +21,49 @@ const HeaderMobile = () => {
       id: 'inicio',
       label: 'inicio',
       subItems: [
-        { text: 'novedades', href: '/hierarchy/news.html' },
-        { text: 'equipo', href: '/hierarchy/beat_team.html' },
-        { text: 'búsqueda', href: '/search.html' }
+        { text: 'novedades', url: '/news' },
+        { text: 'feed', url: '/rss' },
+        { text: 'equipo', url: '/team' },
+        { text: 'búsqueda', url: '/search' },
       ]
     },
     {
       id: 'mapas',
       label: 'mapas',
       subItems: [
-        { text: 'lista de pistas', href: '/hierarchy/tracks.html' },
-        { text: 'artistas', href: '/hierarchy/artists.html' },
-        { text: 'my playlist', href: '/edit-track.html' }
-      ]
+        { text: 'lista de canciones', url: '/songs' },
+        { text: 'artistas destacados', url: '/artists' },
+        { text: 'mi biblioteca', url: '/library' },
+      ],
+    },
+    {
+      id: 'GuessTheBeat',
+      label: 'GuessTheBeat',
+      subItems: [
+        { text: 'cancion', url: '/guess-by-song' },
+        { text: 'cantante', url: '/guess-by-singer' },
+        { text: 'letra', url: '/guess-by-lyrics' },
+        { text: 'anime', url: '/guess-by-anime' },
+      ],
     },
     {
       id: 'comunidad',
       label: 'comunidad',
       subItems: [
-        { text: 'foro', href: '/hierarchy/forums.html' },
-        { text: 'fanarts', href: '/hierarchy/fanarts.html' }
+        { text: 'foro', url: '/forum' },
+        { text: 'chat', url: '/chat' },
+        { text: 'concursos', url: '/contest' },
       ]
     },
     {
       id: 'ayuda',
       label: 'ayuda',
       subItems: [
-        { text: 'preguntas frecuentes', href: '/hierarchy/faq.html' },
-        { text: 'formulario de ayuda', href: '/hierarchy/help-form.html' }
+        { text: 'wiki', url: '/wiki' },
+        { text: 'preguntas frecuentes', url: '/faq' },
+        { text: 'reglas', url: '/rules' },
+        { text: 'reportar abuso', url: '/report' },
+        { text: 'no, en serio, ¡necesito ayuda!', url: '/help-centre' }
       ]
     }
   ];
@@ -56,8 +71,8 @@ const HeaderMobile = () => {
   return (
     <header className="header-mobile">
       <div className="header-mobile-top">
-        <div className="header-mobile-logo">
-          <div className="logo-circle-mobile">AniBeat</div>
+        <div className="header-logo-mobile">
+          <a href="/home" className="header-logo-link-mobile"><div className="logo-circle-mobile">AniBeat</div></a>
         </div>
         <button
           className="header-mobile-hamburger"
@@ -92,7 +107,7 @@ const HeaderMobile = () => {
                   <ul className="mobile-menu-submenu">
                     {item.subItems.map((sub, idx) => (
                       <li key={idx}>
-                        <a href={sub.href} className="mobile-menu-submenu-item">
+                        <a href={sub.url} className="mobile-menu-submenu-item">
                           {sub.text}
                         </a>
                       </li>
@@ -101,9 +116,9 @@ const HeaderMobile = () => {
                 )}
               </div>
             ))}
-            
+
             <IdiomSelector isMobile={true} />
-            
+
           </div>
         </nav>
       )}
