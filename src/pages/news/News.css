@@ -1,0 +1,234 @@
+/* =========================================================
+   VARIABLES GLOBALES (basadas en tu configuración original)
+   ========================================================= */
+
+:root {
+  /* Ajustes generales */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  /* Base de color */
+  --base-hue: 255;
+  --hsl-c1: var(--base-hue), 40%, 100%;
+  --hsl-b5: var(--base-hue), 10%, 15%;
+  --hsl-b4: var(--base-hue), 10%, 20%;
+  --hsl-b3: var(--base-hue), 10%, 25%;
+
+  /* Layout */
+  --navbar-height: 50px;
+
+}
+
+.news-page {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.news-section-page {
+  background-color: hsl(var(--hsl-b5));
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+  color: hsl(var(--hsl-c1));
+  font-size: 14px;
+
+  align-self: center;
+  flex: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .news-section-page {
+    max-width: 1000px;
+    width: calc(100% - 40px);
+  }
+}
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   .news-container  → wrapper general
+   ========================================================= */
+
+.news-container {
+  scrollbar-width: thin;
+  display: grid;
+  scrollbar-color: hsla(0, 0%, 100%, .5) hsla(0, 0%, 100%, .025);
+}
+
+@media (min-width: 900px) {
+  .news-container {
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+/* =========================================================
+   SIDEBAR
+   .news-sidebar → columna izquierda
+   ========================================================= */
+
+.news-sidebar {
+  background-color: hsl(var(--hsl-b4));
+  border-radius: 6px;
+  margin: 10px;
+  padding: 10px;
+}
+
+@media (min-width: 900px) {
+  .news-sidebar {
+    border-radius: 0;
+    margin: 0;
+    max-height: calc(100vh - 50px);
+    overflow-y: scroll;
+    padding: 20px 30px 20px 50px;
+    position: sticky;
+    top: 50px;
+  }
+}
+
+/* Botones de año */
+.year-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.year-button {
+  background-color: hsl(var(--hsl-b4));
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: hsl(var(--hsl-c1));
+  text-align: left;
+}
+
+.year-button:hover {
+  background-color: hsl(var(--hsl-b3));
+}
+
+.year-button.active {
+  background-color: hsl(var(--base-hue), 50%, 45%);
+}
+
+/* =========================================================
+   MESES DESPLEGABLES
+   ========================================================= */
+
+.month-item {
+  margin-bottom: 10px;
+}
+
+.month-button {
+  width: 100%;
+  background-color: hsl(var(--hsl-b4));
+  border: none;
+  padding: 6px 10px;
+  text-align: left;
+  cursor: pointer;
+  color: hsl(var(--hsl-c1));
+}
+
+.month-button:hover {
+  background-color: hsl(var(--hsl-b3));
+}
+
+.month-news-list {
+  margin-top: 6px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.month-news-link {
+  color: hsl(var(--base-hue), 80%, 70%);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.month-news-link:hover {
+  text-decoration: underline;
+}
+
+.no-news {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   .news-content → columna derecha
+   ========================================================= */
+
+.news-content {
+  flex: 1;
+}
+
+.news-content h1 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* =========================================================
+   TARJETAS DE NOTICIAS
+   ========================================================= */
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news-card {
+  background-color: hsl(var(--hsl-b4));
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.news-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.news-card p {
+  margin: 4px 0;
+}
+
+.news-card a {
+  color: hsl(var(--base-hue), 80%, 70%);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.news-card a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   DETALLE DE NOTICIA
+   ========================================================= */
+
+.news-detail-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+
+  background-color: hsl(var(--hsl-b5));
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+  color: hsl(var(--hsl-c1));
+}
+
+.news-detail-container h1 {
+  margin-bottom: 10px;
+}
+
+.news-detail-container a {
+  color: hsl(var(--base-hue), 80%, 70%);
+  text-decoration: none;
+}
+
+.news-detail-container a:hover {
+  text-decoration: underline;
+}

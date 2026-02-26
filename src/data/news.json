@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "news-title-1",
+    "date": "2026-02-13",
+    "description": "news-description-1",
+    "image": "/src/assets/img/news/News.jpg",
+    "author": "AniBeat Team"
+  },
+  {
+    "id": 2,
+    "title": "news-title-2",
+    "date": "2026-02-12",
+    "description": "news-description-2",
+    "image": "/src/assets/img/news/News2.jpg",
+    "author": "xootynator"
+  },
+  {
+    "id": 3,
+    "title": "news-title-3",
+    "date": "2026-02-09",
+    "description": "news-description-3",
+    "image": "/src/assets/img/news/News3.jpg",
+    "author": "AniBeat Team"
+  }
+]
