@@ -38,6 +38,22 @@ const socials = [
         )
     },
     {
+        name: 'RSS',
+        url: '/rss',
+        icon: (
+            <svg viewBox="-4 -3 24 24" width="32" height="32" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+
+                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+
+                <g id="SVGRepo_iconCarrier">
+                    <path d="M3 1H1V3H3C8.52285 3 13 7.47715 13 13V15H15V13C15 6.37258 9.62742 1 3 1Z"></path>
+                    <path d="M3 6H1V8H3C5.76142 8 8 10.2386 8 13V15H10V13C10 9.13401 6.86599 6 3 6Z"></path>
+                    <path d="M3 15C4.10457 15 5 14.1046 5 13C5 11.8954 4.10457 11 3 11C1.89543 11 1 11.8954 1 13C1 14.1046 1.89543 15 3 15Z"></path> </g>
+            </svg>
+        )
+    },
+    {
         name: 'GitHub',
         url: 'https://github.com/miguelangelraazaraujo-hub/AniBeat-with-React',
         icon: (
@@ -65,48 +81,48 @@ function Footer() {
                                 <h3 className="footer-grid-title"><a href="/home" className="footer-grid-title">{t('inicio')}</a></h3>
                                 <ul className="footer-grid-links">
                                     <li><a href="/news" className="footer-grid-link">{t('novedades')}</a></li>
-                                    <li><a href="/rss" className="footer-grid-link">feed</a></li>
-                                    <li><a href="/team" className="footer-grid-link">equipo</a></li>
-                                    <li><a href="/search" className="footer-grid-link">búsqueda</a></li>
+                                    <li><a href="/rss" className="footer-grid-link">{t('feed')}</a></li>
+                                    <li><a href="/team" className="footer-grid-link">{t('team')}</a></li>
+                                    <li><a href="/search" className="footer-grid-link">{t('search')}</a></li>
                                 </ul>
                             </div>
 
                             <div className="footer-grid-column">
                                 <h3 className="footer-grid-title"><a href="/songs" className="footer-grid-title">{t('canciones')}</a></h3>
                                 <ul className="footer-grid-links">
-                                    <li><a href="/songs-list" className="footer-grid-link">lista de canciones</a></li>
-                                    <li><a href="/artists" className="footer-grid-link">artistas destacados</a></li>
-                                    <li><a href="/library" className="footer-grid-link">mi biblioteca</a></li>
+                                    <li><a href="/songs-list" className="footer-grid-link">{t('lista-canciones')}</a></li>
+                                    <li><a href="/artists" className="footer-grid-link">{t('artistas-destacados')}</a></li>
+                                    <li><a href="/library" className="footer-grid-link">{t('mi-biblioteca')}</a></li>
                                 </ul>
                             </div>
 
                             <div className="footer-grid-column">
                                 <h3 className="footer-grid-title"><a href="/songs" className="footer-grid-title">{t('guessr')}</a></h3>
                                 <ul className="footer-grid-links">
-                                    <li><a href="/songs-list" className="footer-grid-link">cancion</a></li>
-                                    <li><a href="/artists" className="footer-grid-link">cantante</a></li>
-                                    <li><a href="/library" className="footer-grid-link">letra</a></li>
-                                    <li><a href="/library" className="footer-grid-link">anime</a></li>
+                                    <li><a href="/songs-list" className="footer-grid-link">{t('cancion')}</a></li>
+                                    <li><a href="/artists" className="footer-grid-link">{t('cantante')}</a></li>
+                                    <li><a href="/library" className="footer-grid-link">{t('letra')}</a></li>
+                                    <li><a href="/library" className="footer-grid-link">{t('anime')}</a></li>
                                 </ul>
                             </div>
 
                             <div className="footer-grid-column">
                                 <h3 className="footer-grid-title"><a href="/comunity" className="footer-grid-title">{t('comunidad')}</a></h3>
                                 <ul className="footer-grid-links">
-                                    <li><a href="/forum" className="footer-grid-link">foro</a></li>
-                                    <li><a href="/chat" className="footer-grid-link">chat</a></li>
-                                    <li><a href="/competitions" className="footer-grid-link">concursos</a></li>
+                                    <li><a href="/forum" className="footer-grid-link">{t('foro')}</a></li>
+                                    <li><a href="/chat" className="footer-grid-link">{t('chat')}</a></li>
+                                    <li><a href="/competitions" className="footer-grid-link">{t('eventos')}</a></li>
                                 </ul>
                             </div>
 
                             <div className="footer-grid-column">
                                 <h3 className="footer-grid-title">{t('ayuda')}</h3>
                                 <ul className="footer-grid-links">
-                                    <li><a href="/wiki" className="footer-grid-link">wiki</a></li>
-                                    <li><a href="/faq" className="footer-grid-link">preguntas frecuentes</a></li>
-                                    <li><a href="/rules" className="footer-grid-link">reglas</a></li>
-                                    <li><a href="/report" className="footer-grid-link">reportar abuso</a></li>
-                                    <li><a href="/help-center" className="footer-grid-link">no, en serio, ¡necesito ayuda!</a></li>
+                                    <li><a href="/wiki" className="footer-grid-link">{t('wiki')}</a></li>
+                                    <li><a href="/faq" className="footer-grid-link">{t('faq')}</a></li>
+                                    <li><a href="/rules" className="footer-grid-link">{t('reglas')}</a></li>
+                                    <li><a href="/report" className="footer-grid-link">{t('reportes')}</a></li>
+                                    <li><a href="/help-center" className="footer-grid-link">{t('ayuda-seria')}</a></li>
                                 </ul>
                             </div>
                         </div>

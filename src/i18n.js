@@ -40,6 +40,13 @@ const resources = {
       "ver-mas": "ver más",
       "welcome-message": "Página de bienvenida del proyecto AniBeat",
       "go-to-contacts": "Ir a Contacto",
+      "por": "por",
+      "news-title-1": "Lanzamiento oficial de la plataforma",
+      "news-description-1": "Hoy presentamos oficialmente la nueva plataforma. Este lanzamiento incluye múltiples funcionalidades nuevas, mejoras en el rendimiento y una interfaz rediseñada.",
+      "news-title-2": "Nuevo modo GuessTheBeat",
+      "news-description-2": "Añadimos nuevas categorías al modo GuessTheBeat, incluyendo autor, letra y anime. También mejoramos el sistema de puntuación.",
+      "news-title-3": "Actualización del sistema de usuarios",
+      "news-description-3": "Se han añadido estadísticas personalizadas, logros desbloqueables y mejoras en la seguridad de las cuentas.",
 
       //FOOTER
       'contenidos': 'Contenidos',
@@ -87,6 +94,13 @@ const resources = {
       "ver-mas": "view more",
       "welcome-message": "Welcome page to the project AniBeat",
       "go-to-contacts": "Go to Contact",
+      "por": "by",
+      "news-title-1": "Official platform launch",
+      "news-description-1": "Today we officially present the new platform. This launch includes multiple new features, performance improvements, and a redesigned interface.",
+      "news-title-2": "New GuessTheBeat Mode",
+      "news-description-2": "We have added new categories to GuessTheBeat mode, including author, lyrics, and anime. We also improved the scoring system.",
+      "news-title-3": "User system update",
+      "news-description-3": "Personalized statistics, unlockable achievements, and account security improvements have been added.",
 
       //FOOTER
       'contenidos': 'Contents',

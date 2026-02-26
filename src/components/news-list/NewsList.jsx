@@ -1,8 +1,13 @@
 import React from 'react';
 import './NewsList.css';
 import news from '../../data/news.json';
+import { useTranslation } from 'react-i18next';
+
 
 function NewsList() {
+
+    const { t } = useTranslation();
+
     return (
         <div className="news-list">
             {news.map((item) => (
@@ -27,11 +32,11 @@ function NewsList() {
                         {/* Título y Descripción*/}
                         <div className='news-post-right'>
                             {/* Título */}
-                            <a href={`/news/${item.id}`} className="news-title">{item.title}</a>
+                            <a href={`/news/${item.id}`} className="news-title">{t(item.title)}</a>
 
                             {/* Descripción */}
                             <div className='news-description-container'>
-                                <p className="news-description">{item.description}</p>
+                                <p className="news-description">{t(item.description)}</p>
                             </div>
                         </div>
                     </div>

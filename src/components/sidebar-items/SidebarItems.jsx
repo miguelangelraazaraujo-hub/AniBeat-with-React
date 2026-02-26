@@ -1,6 +1,11 @@
 import './SidebarItems.css';
+import { useTranslation } from 'react-i18next';
+
 
 const SidebarItems = ({ item }) => {
+
+  const { t } = useTranslation();
+
   return (
     <div className="sidebar-item">
       <a href={item.url} className="sidebar-item-link">
@@ -16,7 +21,7 @@ const SidebarItems = ({ item }) => {
           </div>
           <div className="sidebar-item-artist u-ellipsis-overflow">{item.artist}</div>
           <div className="sidebar-item-creator u-ellipsis-overflow">
-            por {item.creator}
+            {t('por')} {item.creator}
             {item.time && <span className="sidebar-item-time"> • {item.time}</span>}
             {item.likes && <span className="sidebar-item-likes"> ❤️ {item.likes}</span>}
           </div>

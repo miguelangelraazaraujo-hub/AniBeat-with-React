@@ -1,25 +1,25 @@
 [
   {
     "id": 1,
-    "title": "Lanzamiento oficial de la plataforma",
+    "title": "news-title-1",
     "date": "2026-02-13",
-    "description": "Hoy presentamos oficialmente la nueva plataforma. Este lanzamiento incluye múltiples funcionalidades nuevas, mejoras en el rendimiento y una interfaz rediseñada.",
+    "description": "news-description-1",
     "image": "/src/assets/img/news/News.jpg",
     "author": "AniBeat Team"
   },
   {
     "id": 2,
-    "title": "Nuevo modo GuessTheBeat",
+    "title": "news-title-2",
     "date": "2026-02-12",
-    "description": "Añadimos nuevas categorías al modo GuessTheBeat, incluyendo autor, letra y anime. También mejoramos el sistema de puntuación.",
+    "description": "news-description-2",
     "image": "/src/assets/img/news/News2.jpg",
     "author": "xootynator"
   },
   {
     "id": 3,
-    "title": "Actualización del sistema de usuarios",
+    "title": "news-title-3",
     "date": "2026-02-09",
-    "description": "Se han añadido estadísticas personalizadas, logros desbloqueables y mejoras en la seguridad de las cuentas.",
+    "description": "news-description-3",
     "image": "/src/assets/img/news/News3.jpg",
     "author": "AniBeat Team"
   }

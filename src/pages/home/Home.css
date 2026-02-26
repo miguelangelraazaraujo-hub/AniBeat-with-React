@@ -2,7 +2,6 @@ html,
 body,
 #root {
   height: fit-content;
-  width: 99vw;
 }
 
 :root {
@@ -43,6 +42,12 @@ a:hover {
     align-items: flex-start;
     flex-direction: row;
     padding: 0 50px;
+  }
+}
+
+@media (min-width: 1670px) {
+  .home-page {
+    padding: 0 10vw;
   }
 }
 
@@ -107,9 +112,5 @@ a:hover {
 @media (max-width: 768px) {
   .home-page {
     flex-direction: column;
-  }
-
-  .home-sidebar {
-    width: 100%;
   }
 }
