@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './HeaderMobile.css';
 import IdiomSelector from '../idiom-selector/IdiomSelector';
 import 'https://kit.fontawesome.com/0df28cef70.js'
+import { useTranslation } from 'react-i18next';
 
 const HeaderMobile = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,54 +17,57 @@ const HeaderMobile = () => {
     }));
   };
 
+  const { t } = useTranslation();
+
   const menuItems = [
     {
       id: 'inicio',
-      label: 'inicio',
+      label: t('inicio'),
+      url: '/home',
       subItems: [
-        { text: 'novedades', url: '/news' },
-        { text: 'feed', url: '/rss' },
-        { text: 'equipo', url: '/team' },
-        { text: 'búsqueda', url: '/search' },
+        { text: t('novedades'), url: '/news', isHeader: true },
+        { text: t('feed'), url: '/rss' },
+        { text: t('team'), url: '/team' },
+        { text: t('search'), url: '/search' },
       ]
     },
     {
-      id: 'mapas',
-      label: 'mapas',
+      id: 'canciones',
+      label: t('canciones'),
       subItems: [
-        { text: 'lista de canciones', url: '/songs' },
-        { text: 'artistas destacados', url: '/artists' },
-        { text: 'mi biblioteca', url: '/library' },
+        { text: t('lista-canciones'), url: '/songs' },
+        { text: t('artistas-destacados'), url: '/artists' },
+        { text: t('mi-biblioteca'), url: '/library' },
       ],
     },
     {
       id: 'GuessTheBeat',
-      label: 'GuessTheBeat',
+      label: t('guessr'),
       subItems: [
-        { text: 'cancion', url: '/guess-by-song' },
-        { text: 'cantante', url: '/guess-by-singer' },
-        { text: 'letra', url: '/guess-by-lyrics' },
-        { text: 'anime', url: '/guess-by-anime' },
+        { text: t('cancion'), url: '/guess-by-song' },
+        { text: t('cantante'), url: '/guess-by-singer' },
+        { text: t('letra'), url: '/guess-by-lyrics' },
+        { text: t('anime'), url: '/guess-by-anime' },
       ],
     },
     {
       id: 'comunidad',
-      label: 'comunidad',
+      label: t('comunidad'),
       subItems: [
-        { text: 'foro', url: '/forum' },
-        { text: 'chat', url: '/chat' },
-        { text: 'concursos', url: '/contest' },
+        { text: t('foro'), url: '/forum' },
+        { text: t('chat'), url: '/chat' },
+        { text: t('eventos'), url: '/contest' },
       ]
     },
     {
       id: 'ayuda',
-      label: 'ayuda',
+      label: t('ayuda'),
       subItems: [
-        { text: 'wiki', url: '/wiki' },
-        { text: 'preguntas frecuentes', url: '/faq' },
-        { text: 'reglas', url: '/rules' },
-        { text: 'reportar abuso', url: '/report' },
-        { text: 'no, en serio, ¡necesito ayuda!', url: '/help-centre' }
+        { text: t('wiki'), url: '/wiki' },
+        { text: t('faq'), url: '/faq' },
+        { text: t('reglas'), url: '/rules' },
+        { text: t('reportes'), url: '/report' },
+        { text: t('ayuda-seria'), url: '/help-centre' },
       ]
     }
   ];
@@ -93,6 +97,7 @@ const HeaderMobile = () => {
                 <button
                   className="mobile-menu-item-main"
                   onClick={() => toggleSection(item.id)}
+                  href={item.url}
                 >
                   <span className="mobile-menu-item-icon">
                     {openSections[item.id] ? (

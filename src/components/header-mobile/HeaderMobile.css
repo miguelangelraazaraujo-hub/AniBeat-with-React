@@ -123,6 +123,7 @@
 }
 
 .mobile-menu-submenu-item:hover {
-  color: #4d9eff;
+  /* color: #4d9eff; */
   background-color: #3a3a4a;
+  text-decoration: none;
 }

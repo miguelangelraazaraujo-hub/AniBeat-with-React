@@ -38,7 +38,7 @@ function Home() {
                 {/* Columna principal */}
                 <main className="home-main">
                     <section className="home-section">
-                        <h2 className="section-title">{t('novedades')}</h2>
+                        <h2 className="section-title">{t('Novedades')}</h2>
                         <NewsList news={news} />
                     </section>
                 </main>

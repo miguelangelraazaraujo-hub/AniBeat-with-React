@@ -1,14 +1,14 @@
 .cookies-container {
   display: flex;
   min-height: 100vh;
-  background-color: #121212;
+  /* background-color: #121212; */
   color: #cccccc;
 }
 
 /* Sidebar */
 .cookies-sidebar {
   width: 260px;
-  background-color: #1a1a2e;
+  background-color: #363a4e;
   padding: 30px 20px 40px;
   border-right: 1px solid #333344;
   position: sticky;

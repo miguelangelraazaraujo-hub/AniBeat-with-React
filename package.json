@@ -11,6 +11,7 @@
     "generate:rss": "node scripts/generate-rss.js"
   },
   "dependencies": {
+    "firebase": "^12.9.0",
     "i18next": "^25.8.11",
     "i18next-browser-languagedetector": "^8.2.1",
     "leaflet": "^1.9.4",

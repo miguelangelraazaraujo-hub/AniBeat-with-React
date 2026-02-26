@@ -1,6 +1,7 @@
 import "./Header.css";
 import React, { useRef, useEffect, useState } from 'react';
 import IdiomSelector from '../idiom-selector/IdiomSelector';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -20,6 +21,8 @@ const Header = () => {
     return () => document.removeEventListener('mousemove', handler);
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <header className="header" ref={menuRef}>
       {/* Overlay */}
@@ -37,56 +40,56 @@ const Header = () => {
         {[
           {
             id: 'inicio',
-            label: 'inicio',
+            label: t('inicio'),
             url: '/home',
             submenu: [
-              { text: 'novedades', url: '/news', isHeader: true },
-              { text: 'feed', url: '/rss' },
-              { text: 'equipo', url: '/team' },
-              { text: 'búsqueda', url: '/search' },
+              { text: t('novedades'), url: '/news', isHeader: true },
+              { text: t('feed'), url: '/rss' },
+              { text: t('team'), url: '/team' },
+              { text: t('search'), url: '/search' },
             ],
           },
           {
             id: 'canciones',
-            label: 'canciones',
+            label: t('canciones'),
             url: '/songs',
             submenu: [
-              { text: 'lista de canciones', url: '/songs', isHeader: true },
-              { text: 'artistas destacados', url: '/artists' },
-              { text: 'mi biblioteca', url: '/library' },
+              { text: t('lista-canciones'), url: '/songs', isHeader: true },
+              { text: t('artistas-destacados'), url: '/artists' },
+              { text: t('mi-biblioteca'), url: '/library' },
             ],
           },
           {
             id: 'GuessTheBeat',
-            label: 'GuessTheBeat',
+            label: t('GuessTheBeat'),
             url: '/guess-game',
             submenu: [
-              { text: 'cancion', url: '/guess-by-song', isHeader: true },
-              { text: 'cantante', url: '/guess-by-singer' },
-              { text: 'letra', url: '/guess-by-lyrics' },
-              { text: 'anime', url: '/guess-by-anime' },
+              { text: t('cancion'), url: '/guess-by-song', isHeader: true },
+              { text: t('cantante'), url: '/guess-by-singer' },
+              { text: t('letra'), url: '/guess-by-lyrics' },
+              { text: t('anime'), url: '/guess-by-anime' },
             ],
           },
           {
             id: 'comunidad',
-            label: 'comunidad',
+            label: t('comunidad'),
             url: '/community',
             submenu: [
-              { text: 'foro', url: '/forum', isHeader: true },
-              { text: 'chat', url: '/chat' },
-              { text: 'concursos', url: '/contest' },
+              { text: t('foro'), url: '/forum', isHeader: true },
+              { text: t('chat'), url: '/chat' },
+              { text: t('eventos'), url: '/contest' },
             ],
           },
           {
             id: 'ayuda',
-            label: 'ayuda',
+            label: t('ayuda'),
             url: '/help',
             submenu: [
-              { text: 'wiki', url: '/wiki', isHeader: true },
-              { text: 'preguntas frecuentes', url: '/faq' },
-              { text: 'reglas', url: '/rules' },
-              { text: 'reportar abuso', url: '/report' },
-              { text: 'no, en serio, ¡necesito ayuda!', url: '/help-centre' },
+              { text: t('wiki'), url: '/wiki', isHeader: true },
+              { text: t('faq'), url: '/faq' },
+              { text: t('reglas'), url: '/rules' },
+              { text: t('reportes'), url: '/report' },
+              { text: t('ayuda-seria'), url: '/help-centre' },
             ],
           },
         ].map((item) => (
@@ -132,7 +135,7 @@ const Header = () => {
           </svg>
         </button>
         <button className="header-avatar">
-          <svg width="18" height="18" viewBox="0 0 17 18" fill="none"  stroke="currentColor" strokeWidth="2">
+          <svg width="18" height="18" viewBox="0 0 17 18" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M8 7C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1C6.34315 1 5 2.34315 5 4C5 5.65685 6.34315 7 8 7Z" />
             <path d="M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z" />
           </svg>
