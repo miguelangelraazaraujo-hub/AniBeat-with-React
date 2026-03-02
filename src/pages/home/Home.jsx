@@ -15,7 +15,7 @@ function Home() {
     const navigate = useNavigate();
 
     const handClick = () => {
-        navigate("/Contact");
+        navigate("/News");
     }
 
     const [news, setNews] = useState([]);
@@ -33,13 +33,16 @@ function Home() {
             <Header />
             <HeaderMobile />
             <p>{t('welcome-message')}</p>
-            <button onClick={handClick}>{t('go-to-contacts')}</button>
+            <div className="home-news-banner"></div>
             <div className="home-page">
                 {/* Columna principal */}
                 <main className="home-main">
                     <section className="home-section">
                         <h2 className="section-title">{t('Novedades')}</h2>
                         <NewsList news={news} />
+                        <div className="view-more-button-container">
+                            <button className="view-more-button" onClick={handClick}>{t('ver-mas')}</button>
+                        </div>
                     </section>
                 </main>
 

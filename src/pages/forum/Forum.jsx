@@ -49,7 +49,7 @@ function Forum() {
                     >
                         <option value="all">Todas</option>
                         <option value="anime">Anime</option>
-                        <option value="musica">Música</option>
+                        <option value="música">Música</option>
                         <option value="comunidad">Comunidad</option>
                         <option value="eventos">Eventos</option>
                     </select>

@@ -1,12 +1,10 @@
 .news-list {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .news-item {
   background: #1a1a2e;
-  border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
   margin-bottom: 5px;
 }
