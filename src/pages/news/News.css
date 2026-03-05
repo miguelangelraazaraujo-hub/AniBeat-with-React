@@ -42,6 +42,7 @@
 .news-container {
   scrollbar-width: thin;
   display: grid;
+  background-color: #363a4e;
   scrollbar-color: hsla(0, 0%, 100%, .5) hsla(0, 0%, 100%, .025);
 }
 
@@ -52,7 +53,8 @@
 }
 
 .news-sidebar {
-  background-color: hsl(var(--hsl-b4));
+  /* background-color: hsl(var(--hsl-b4)); */
+  background-color: #363a4e;
   border-radius: 6px;
   margin: 10px;
   padding: 10px;
@@ -94,8 +96,21 @@
   background-color: hsl(var(--base-hue), 50%, 45%);
 }
 
+@media (max-width: 900px) {
+  .months-section {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .month-item {
   margin-bottom: 10px;
+}
+
+@media (min-width: 900px) {
+  .month-item {
+    width: 12%;
+  }
 }
 
 .month-button {
@@ -137,6 +152,8 @@
 
 .news-content {
   flex: 1;
+  background-color: #363a4e;
+  padding: 5px;
 }
 
 .news-content h1 {
