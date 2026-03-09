@@ -7,8 +7,8 @@ const IdiomSelector = ({ isMobile = false }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const languages = [
-    { code: 'es', name: 'Español', flag: '/src/assets/img/flags/1f1ea-1f1f8.svg' },
-    { code: 'en', name: 'English', flag: '/src/assets/img/flags/1f1ec-1f1e7.svg' },
+    { code: 'es', name: 'Español', flag: '/img/flags/1f1ea-1f1f8.svg' },
+    { code: 'en', name: 'English', flag: '/img/flags/1f1ec-1f1e7.svg' },
   ];
 
   const currentLang = languages.find(lang => lang.code === i18n.language) || languages[0];

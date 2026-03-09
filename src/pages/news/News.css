@@ -107,7 +107,7 @@
   margin-bottom: 10px;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 900px) {
   .month-item {
     width: 12%;
   }
