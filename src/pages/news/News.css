@@ -100,6 +100,7 @@
   .months-section {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -154,6 +155,7 @@
   flex: 1;
   background-color: #363a4e;
   padding: 5px;
+  margin: 10px;
 }
 
 .news-content h1 {
