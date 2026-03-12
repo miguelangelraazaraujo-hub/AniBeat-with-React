@@ -3,10 +3,10 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { newsData } from "../src/data/news-data.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const fileName = fileURLToPath(import.meta.url);
+const dirName = path.dirname(fileName);
 
-const siteUrl = "https://misitio.com";
+const siteUrl = "https://anibeat-with-react.web.app";
 
 function generateRSS(news) {
   const items = news.map(item => `
@@ -32,7 +32,7 @@ function generateRSS(news) {
 const rssContent = generateRSS(newsData);
 
 fs.writeFileSync(
-  path.join(__dirname, "../public/rss.xml"),
+  path.join(dirName, "../public/rss.xml"),
   rssContent
 );
 

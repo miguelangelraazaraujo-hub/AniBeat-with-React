@@ -26,7 +26,7 @@ const HeaderMobile = () => {
       url: '/home',
       subItems: [
         { text: t('novedades'), url: '/news', isHeader: true },
-        { text: t('feed'), url: '/rss' },
+        { text: t('RSS'), url: '/rss' },
         { text: t('team'), url: '/team' },
         { text: t('search'), url: '/search' },
       ]
