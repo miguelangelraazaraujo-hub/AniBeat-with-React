@@ -133,7 +133,7 @@ The RSS feed was verified using RSS Viewer, ensuring the XML is properly parsed 
 This ensures that external RSS readers can consume AniBeat updates correctly.
 
 Below is a screenshot showing the RSS feed opened in Feedly and displaying the news items from the application.
-![RSS Viewer Screenshot](./screenshots/rss-viewer-screenshot.png)
+![RSS Viewer Screenshot](./screeshots/rss-viewer-screenshot.png)
 
 ### Contact
 Have questions or want to collaborate? Reach out!
