@@ -120,10 +120,10 @@ To run AniBeat locally:
 ## Firebase Hosting
 The project is hosted on Firebase Hosting:
 - 🌐 Live Site: [AniBeat on Firebase](https://anibeat-with-react.web.app/)
-Firebase allows dynamic content via Firestore for forum posts and handles hosting of static assets, including the RSS XML.
+Firebase allows dynamic content via Firestore for forum posts and handles hosting of static assets, including the RSS XML.store
 
 ## RSS Feed
-AniBeat now includes an RSS feed for project updates and forum posts:
+AniBeat now includes an RSS feed for news updates and forum posts:
 - 📄 RSS XML: [RSS Feed](https://anibeat-with-react.web.app/rss.xml)
 
 ### RSS Testing
