@@ -7,8 +7,6 @@ import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { newsData } from "../../data/news-data";
 
-const myArray = ['Apple', 'Banana', 'Cherry'];
-
 export default function News() {
 
     const getYear = (date) => new Date(date).getFullYear();
@@ -67,7 +65,6 @@ export default function News() {
         <>
             <Header />
             <HeaderMobile />
-            {myArray.map((item, index) => { return <p key={index}>{item}</p> })}
             <div className="news-page">
                 <div className="news-section-page">
                     <div className="news-container">

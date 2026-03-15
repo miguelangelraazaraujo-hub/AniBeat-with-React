@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://www.anibeat.com">
+  <a href="https://anibeat-with-react.web.app/">
     <img src="src/assets/AniBeat.png" alt="AniBeat Logo" width="120" height="120">
   </a>
 
@@ -30,6 +30,8 @@
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#tutorials--resources">Tutorials & Resources</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#firebase-hosting">Firebase Hosting</a></li>
+    <li><a href="#rss-feed">RSS Feed</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -59,6 +61,8 @@ Designed with a dark theme, smooth animations, and responsive layouts, AniBeat o
 - 🔒 **Legal Compliance**: Full GDPR-ready pages: Cookie Policy, Privacy Policy, and Terms of Sale.
 - 🗺️ **Location-aware Features**: Integrated map views using **Leaflet** for community events or artist locations.
 - 🎨 **Modern UI**: Gradient headers, animated overlays, and card-based layouts inspired by osu! and Spotify.
+- 📝 **Forum with Firebase CRUD**: Create, update, delete, and search posts dynamically with images.
+- 📰 **RSS Feed Support**: Export project news/posts via RSS feed.
 
 ---
 
@@ -113,8 +117,26 @@ To run AniBeat locally:
 4. Open http://localhost:5173 in your browser.
     💡 No backend required — all data is stored in localStorage.
 
+## Firebase Hosting
+The project is hosted on Firebase Hosting:
+- 🌐 Live Site: [AniBeat on Firebase](https://anibeat-with-react.web.app/)
+Firebase allows dynamic content via Firestore for forum posts and handles hosting of static assets, including the RSS XML.
+
+## RSS Feed
+AniBeat now includes an RSS feed for project updates and forum posts:
+- 📄 RSS XML: [RSS Feed](https://anibeat-with-react.web.app/rss.xml)
+
+### RSS Testing
+The RSS feed was verified using RSS Viewer, ensuring the XML is properly parsed and displayed.
+- All posts appear in chronological order based on createdAt.
+- Images, titles, and categories are correctly extracted.
+This ensures that external RSS readers can consume AniBeat updates correctly.
+
+Below is a screenshot showing the RSS feed opened in Feedly and displaying the news items from the application.
+![RSS Viewer Screenshot](./screenshots/rss-viewer-screenshot.png)
+
 ### Contact
 Have questions or want to collaborate? Reach out!
 - Project Link: https://github.com/miguelangelraazaraujo-hub/AniBeat-with-React.git
-- Website: https://www.anibeat.com
+- Website: https://anibeat-with-react.web.app/
 Made with ❤️ for the anime and rhythm game community.
