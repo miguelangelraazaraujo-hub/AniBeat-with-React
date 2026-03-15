@@ -1,20 +1,13 @@
-/* =========================================================
-   VARIABLES GLOBALES (basadas en tu configuración original)
-   ========================================================= */
-
 :root {
-  /* Ajustes generales */
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-  /* Base de color */
   --base-hue: 255;
   --hsl-c1: var(--base-hue), 40%, 100%;
   --hsl-b5: var(--base-hue), 10%, 15%;
   --hsl-b4: var(--base-hue), 10%, 20%;
   --hsl-b3: var(--base-hue), 10%, 25%;
 
-  /* Layout */
   --navbar-height: 50px;
 
 }
@@ -46,14 +39,10 @@
   }
 }
 
-/* =========================================================
-   CONTENEDOR PRINCIPAL
-   .news-container  → wrapper general
-   ========================================================= */
-
 .news-container {
   scrollbar-width: thin;
   display: grid;
+  background-color: #363a4e;
   scrollbar-color: hsla(0, 0%, 100%, .5) hsla(0, 0%, 100%, .025);
 }
 
@@ -63,13 +52,9 @@
   }
 }
 
-/* =========================================================
-   SIDEBAR
-   .news-sidebar → columna izquierda
-   ========================================================= */
-
 .news-sidebar {
-  background-color: hsl(var(--hsl-b4));
+  /* background-color: hsl(var(--hsl-b4)); */
+  background-color: #363a4e;
   border-radius: 6px;
   margin: 10px;
   padding: 10px;
@@ -87,7 +72,6 @@
   }
 }
 
-/* Botones de año */
 .year-selector {
   display: flex;
   flex-direction: column;
@@ -112,12 +96,22 @@
   background-color: hsl(var(--base-hue), 50%, 45%);
 }
 
-/* =========================================================
-   MESES DESPLEGABLES
-   ========================================================= */
+@media (max-width: 900px) {
+  .months-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 .month-item {
   margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .month-item {
+    width: 12%;
+  }
 }
 
 .month-button {
@@ -157,23 +151,17 @@
   opacity: 0.6;
 }
 
-/* =========================================================
-   CONTENIDO PRINCIPAL
-   .news-content → columna derecha
-   ========================================================= */
-
 .news-content {
   flex: 1;
+  background-color: #363a4e;
+  padding: 5px;
+  margin: 10px;
 }
 
 .news-content h1 {
   margin-bottom: 20px;
   font-size: 20px;
 }
-
-/* =========================================================
-   TARJETAS DE NOTICIAS
-   ========================================================= */
 
 .news-list {
   display: flex;
@@ -205,10 +193,6 @@
 .news-card a:hover {
   text-decoration: underline;
 }
-
-/* =========================================================
-   DETALLE DE NOTICIA
-   ========================================================= */
 
 .news-detail-container {
   max-width: 800px;

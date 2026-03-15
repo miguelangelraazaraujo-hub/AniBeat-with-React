@@ -1,3 +1,9 @@
+import NewSong1 from "/src/assets/img/songs/kirai.jpg"
+import NewSong2 from "/src/assets/img/songs/hollow.jpg"
+import NewSong3 from "/src/assets/img/songs/imademo.jpg"
+import NewSong4 from "/src/assets/img/songs/aokigahara.jpg"
+import NewSong5 from "/src/assets/img/songs/himitsu.jpg"
+
 const newBeatmaps = [
   {
     id: 2502080,
@@ -5,7 +11,7 @@ const newBeatmaps = [
     artist: "RAMM ni Haiyoru Tamao-san",
     creator: "eZmmR",
     time: "hace 6 horas",
-    image: "/src/assets/img/songs/kirai.jpg",
+    image: NewSong1,
     url: "/mapas/2502080"
   },
   {
@@ -14,7 +20,7 @@ const newBeatmaps = [
     artist: "Orden Ogan",
     creator: "yakisode",
     time: "hace 7 horas",
-    image: "/src/assets/img/songs/hollow.jpg",
+    image: NewSong2,
     url: "/mapas/2452570"
   },
   {
@@ -23,7 +29,7 @@ const newBeatmaps = [
     artist: "SuganoMusic",
     creator: "Luscent",
     time: "hace 7 horas",
-    image: "/src/assets/img/songs/imademo.jpg",
+    image: NewSong3,
     url: "/mapas/2500223"
   },
   {
@@ -32,7 +38,7 @@ const newBeatmaps = [
     artist: "ZUN",
     creator: "Nyanaro",
     time: "hace 8 horas",
-    image: "/src/assets/img/songs/aokigahara.jpg",
+    image: NewSong4,
     url: "/mapas/2453058"
   },
   {
@@ -41,7 +47,7 @@ const newBeatmaps = [
     artist: "kessoku band",
     creator: "TasseDeThe",
     time: "hace 8 horas",
-    image: "/src/assets/img/songs/himitsu.jpg",
+    image: NewSong5,
     url: "/mapas/2416102"
   }
 ];

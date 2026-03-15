@@ -1,3 +1,7 @@
+import popularSong1 from "/src/assets/img/popular/popular1.jpg"
+import popularSong2 from "/src/assets/img/popular/popular2.jpg"
+import popularSong3 from "/src/assets/img/popular/popular3.jpg"
+
 const popularBeatmaps = [
   {
     id: 1,
@@ -5,7 +9,7 @@ const popularBeatmaps = [
     artist: "lexycat",
     creator: "Chromasia",
     likes: "1.009",
-    image: "/src/assets/img/popular/popular1.jpg",
+    image: popularSong1,
     url: "/mapas/1"
   },
   {
@@ -14,7 +18,7 @@ const popularBeatmaps = [
     artist: "TAK",
     creator: "Andrea",
     likes: "171",
-    image: "/src/assets/img/popular/popular2.jpg",
+    image: popularSong2,
     url: "/mapas/2"
   },
   {
@@ -23,7 +27,7 @@ const popularBeatmaps = [
     artist: "Erika",
     creator: "Mita",
     likes: "885",
-    image: "/src/assets/img/popular/popular3.jpg",
+    image: popularSong3,
     url: "/mapas/3"
   }
 ];
