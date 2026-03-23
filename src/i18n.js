@@ -48,6 +48,10 @@ const resources = {
       "news-title-3": "Actualización del sistema de usuarios",
       "news-description-3": "Se han añadido estadísticas personalizadas, logros desbloqueables y mejoras en la seguridad de las cuentas.",
 
+      //NEWS
+      "Años": "Años",
+      "Meses": "Meses",
+
       //FOOTER
       'contenidos': 'Contenidos',
       'ubicacion': 'Nuestra oficina',
@@ -101,6 +105,10 @@ const resources = {
       "news-description-2": "We have added new categories to GuessTheBeat mode, including author, lyrics, and anime. We also improved the scoring system.",
       "news-title-3": "User system update",
       "news-description-3": "Personalized statistics, unlockable achievements, and account security improvements have been added.",
+
+      //NEWS
+      "Años": "Years",
+      "Meses": "Months",
 
       //FOOTER
       'contenidos': 'Contents',

@@ -6,6 +6,7 @@ import Footer from "../../components/footer/Footer"
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { newsData } from "../../data/news-data";
+import { useTranslation } from 'react-i18next';
 
 export default function News() {
 
@@ -61,6 +62,8 @@ export default function News() {
         }));
     };
 
+    const { t } = useTranslation();
+
     return (
         <>
             <Header />
@@ -69,7 +72,7 @@ export default function News() {
                 <div className="news-section-page">
                     <div className="news-container">
                         <aside className="news-sidebar">
-                            <h2 className="sidebar-title">Años</h2>
+                            <h2 className="sidebar-title">{t('Años')}</h2>
 
                             <div className="year-selector">
                                 {years.map((year) => (
@@ -87,6 +90,7 @@ export default function News() {
                                 ))}
                             </div>
 
+                            <h2 className="sidebar-title">{t('Meses')}</h2>
                             <div className="months-section">
                                 {monthNames.map((monthName, index) => (
                                     <div key={index} className="month-item">

@@ -1,4 +1,3 @@
-/* Estilos base */
 .idiom-selector,
 .idiom-selector-mobile {
   position: relative;
@@ -6,7 +5,6 @@
   width: 100%;
 }
 
-/* Botón principal */
 .idiom-selector-button,
 .mobile-menu-item-main {
   background: #2d3e69;
@@ -26,7 +24,6 @@
   background: #4d9eff;
 }
 
-/* Bandera */
 .idiom-selector-flag {
   width: 24px;
   height: auto;
@@ -35,8 +32,7 @@
   border-radius: 3px;
 }
 
-/* === ESTILOS PARA DESKTOP (flotante) === */
-@media (min-width: 768px) {
+@media (min-width: 823px) {
   .idiom-selector-menu {
     position: absolute;
     top: 100%;
@@ -70,8 +66,7 @@
   }
 }
 
-/* === ESTILOS PARA MÓVIL (en flujo) === */
-@media (max-width: 767px) {
+@media (max-width: 822px) {
   .idiom-selector-mobile {
     height: auto;
   }
