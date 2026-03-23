@@ -8,6 +8,22 @@ export const newsData = [
       "Hoy presentamos oficialmente la nueva plataforma. Este lanzamiento incluye múltiples funcionalidades nuevas, mejoras en el rendimiento y una interfaz rediseñada.",
   },
   {
+    id: 6,
+    title: "Prueba noticias",
+    date: "2026-03-23",
+    excerpt: "Prueba para la categoria de noticias.",
+    content:
+      "Probando el sistema de ordenación y display de noticias",
+  },
+  {
+    id: 7,
+    title: "Prueba noticias duplicadas",
+    date: "2026-03-23",
+    excerpt: "Prueba de comportamiento para las noticias duplicadas.",
+    content:
+      "Probando el sistema de ordenación y duplicado de noticias",
+  },
+  {
     id: 2,
     title: "Nuevo modo GuessTheBeat",
     date: "2024-02-10",

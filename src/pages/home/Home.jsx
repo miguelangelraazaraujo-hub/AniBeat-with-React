@@ -59,7 +59,7 @@ function Home() {
                             {newBeatmaps.map(item => (
                                 <SidebarItems key={item.id} item={item} />
                             ))}
-                            <a href="">
+                            <a href="/songs">
                                 {t('ver-mas')}
                             </a>
                         </div>
