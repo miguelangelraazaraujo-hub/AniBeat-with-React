@@ -32,6 +32,7 @@
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#firebase-hosting">Firebase Hosting</a></li>
     <li><a href="#rss-feed">RSS Feed</a></li>
+    <li><a href="#import/export">Import/Export Functionality</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -134,6 +135,37 @@ This ensures that external RSS readers can consume AniBeat updates correctly.
 
 Below is a screenshot showing the RSS feed opened in Feedly and displaying the news items from the application.
 ![RSS Viewer Screenshot](./screeshots/rss-viewer-screenshot.png)
+
+## Import/Export Functionality
+AniBeat now supports importing and exporting playlist data in multiple formats: JSON, CSV, and XML. This allows users to back up their playlists or transfer them between accounts.
+
+### Supported Formats
+- JSON (.json)
+- CSV (.csv)
+- XML (.xml)
+
+### Export
+Each playlist can be exported individually using the available buttons in the UI:
+- Export to JSON
+- Export to CSV
+- Export to XML
+
+### Import
+Users can import playlists using the file input available in the playlists section. The application will:
+- Read the selected file
+- Parse its content depending on the format
+- Store the data directly in Firebase
+
+### Sample Import Files
+You can test the import functionality using the following sample files included in the project:
+- JSON: /Data.json
+- XML: /Data.xml
+- CSV: /Data.csv
+
+When the project is deployed, these files are accessible via:
+- [Data.json](https://anibeat-with-react.web.app/Data.json)
+- [Data.xml](https://anibeat-with-react.web.app/Data.xml)
+- [Data.csv](https://anibeat-with-react.web.app/Data.csv)
 
 ### Contact
 Have questions or want to collaborate? Reach out!

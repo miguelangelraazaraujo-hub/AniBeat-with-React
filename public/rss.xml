@@ -13,6 +13,20 @@
     </item>
   
     <item>
+      <title>Prueba noticias</title>
+      <link>https://anibeat-with-react.web.app/news/6</link>
+      <description>Prueba para la categoria de noticias.</description>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Prueba noticias duplicadas</title>
+      <link>https://anibeat-with-react.web.app/news/7</link>
+      <description>Prueba de comportamiento para las noticias duplicadas.</description>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+  
+    <item>
       <title>Nuevo modo GuessTheBeat</title>
       <link>https://anibeat-with-react.web.app/news/2</link>
       <description>Añadimos nuevas categorías al modo de juego.</description>
