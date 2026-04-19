@@ -3,9 +3,14 @@ import Header from "../../components/header/Header"
 import HeaderMobile from "../../components/header-mobile/HeaderMobile"
 import Footer from "../../components/footer/Footer"
 import { useEffect, useState } from "react";
-import { createPlaylist, addOrUpdateSongInPlaylist } from "../../services/playlist-service";
+import { createPlaylist, addOrUpdateSongInPlaylist, handleImport } from "../../services/playlist-service";
 import { onSnapshot, collection } from "firebase/firestore";
 import { db } from "../../firebase";
+import {
+    exportToJSON,
+    exportToCSV,
+    exportToXML
+} from "../../services/import-export-service";
 
 function Songs() {
     const [songs, setSongs] = useState([]);
@@ -50,15 +55,20 @@ function Songs() {
     };
 
     const handleAddSong = async (song, playlistId) => {
-        console.log("PLAYLIST ID:", playlistId);
-        console.log("SONG:", song);
 
         if (!playlistId) return;
 
         try {
-            const cleanSong = Object.fromEntries(
-                Object.entries(song).filter(([_, v]) => v !== undefined)
-            );
+            const cleanSong = {
+                id: song.id,
+                title: song.title,
+                autor: song.autor,
+                duration: song.duration,
+                img: song.img,
+                album: song.album,
+                genre: song.genre
+            };
+            console.log(cleanSong);
             await addOrUpdateSongInPlaylist(playlistId, cleanSong);
         } catch (error) {
             console.error("Error añadiendo canción:", error);
@@ -73,7 +83,6 @@ function Songs() {
 
                 <h2>Canciones</h2>
 
-                {/* Lista de canciones */}
                 <div className="songs-grid">
                     {songs.map(song => (
                         <div key={song.id} className="song-card">
@@ -83,7 +92,7 @@ function Songs() {
 
                             <div className="song-info">
                                 <h3>{song.title}</h3>
-                                <p>{song.artist}</p>
+                                <p>{song.autor}</p>
                             </div>
 
                             <select
@@ -93,7 +102,9 @@ function Songs() {
                                     const playlistId = e.target.value;
                                     if (!playlistId) return;
 
-                                    addSongToPlaylist(playlistId, song);
+                                    handleAddSong(song, playlistId);
+
+                                    e.target.value = "";
                                 }}
                             >
                                 <option value="">Añadir a playlist</option>
@@ -107,35 +118,44 @@ function Songs() {
                     ))}
                 </div>
 
-                {/* Playlists */}
                 <h2>Playlists</h2>
+                <div className="playlists-actions">
+                    <button
+                        className="create-playlist-btn"
+                        onClick={() => setIsModalOpen(true)}
+                    >
+                        Crear Playlist
+                    </button>
 
-                {/* Crear playlist */}
-                <button
-                    className="create-playlist-btn"
-                    onClick={() => setIsModalOpen(true)}
-                >
-                    Crear Playlist
-                </button>
+                    <input
+                        className="import-input"
+                        type="file"
+                        accept=".json,.csv,.xml"
+                        onChange={handleImport}
+                    />
+                </div>
 
                 <div className="playlist-grid">
                     {playlists.map(pl => (
                         <div key={pl.id} className="playlist-card">
                             <h3>{pl.name}</h3>
+                            <div className="playlist-actions">
+                                <button className="playlist-action-btn" onClick={() => exportToJSON(pl)}>JSON</button>
+                                <button className="playlist-action-btn" onClick={() => exportToCSV(pl)}>CSV</button>
+                                <button className="playlist-action-btn" onClick={() => exportToXML(pl)}>XML</button>
+                            </div>
 
                             <div className="playlist-songs">
                                 {pl.songs && pl.songs.length > 0 ? (
                                     pl.songs.map((song) => (
                                         <div key={song.id} className="playlist-song-row">
 
-                                            {/* Imagen */}
                                             <img
                                                 src={song.img}
                                                 alt={song.title}
                                                 className="playlist-song-img"
                                             />
 
-                                            {/* Info */}
                                             <div className="playlist-song-info">
                                                 <span className="playlist-song-title">
                                                     {song.title}
@@ -145,7 +165,6 @@ function Songs() {
                                                 </span>
                                             </div>
 
-                                            {/* Duración */}
                                             <span className="playlist-song-duration">
                                                 {song.duration}
                                             </span>

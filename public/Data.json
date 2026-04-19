@@ -1,0 +1,38 @@
+{
+  "id": "MYYFBan7Cd2Z1SJslgyk",
+  "createdAt": {
+    "type": "firestore/timestamp/1.0",
+    "seconds": 1776626136,
+    "nanoseconds": 749000000
+  },
+  "name": "Data",
+  "songs": [
+    {
+      "id": "qWwkqkOKd0kjSVINcqx5",
+      "genre": "Anime",
+      "autor": "Mrs. GREEN APPLE",
+      "img": "https://i.scdn.co/image/ab67616d00001e021a4e99f0c693fecc9038d3dd",
+      "title": "Inferno",
+      "duration": "3:32",
+      "album": "インフェルノ"
+    },
+    {
+      "img": "https://i.scdn.co/image/ab67616d00001e0264c8cf7bc530a05dd10e8efe",
+      "autor": "LiSA",
+      "title": "紅蓮華",
+      "genre": "Anime",
+      "id": "lY3qTg2t2IbfzNUZPf4U",
+      "album": "LEO-NiNE",
+      "duration": "3:58"
+    },
+    {
+      "id": "Gk9I5CYSpGDjkRbGSYsS",
+      "title": "Cry Baby",
+      "autor": "OFFICIAL HIGE DANDISM",
+      "duration": "4:00",
+      "img": "https://i.scdn.co/image/ab67616d00001e0262a18726386645c65ae99d32",
+      "album": "Cry Baby",
+      "genre": "Anime"
+    }
+  ]
+}

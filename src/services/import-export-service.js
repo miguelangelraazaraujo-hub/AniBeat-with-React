@@ -1,37 +1,44 @@
-export const exportToJSON = (data) => {
-    const blob = new Blob([JSON.stringify(data, null, 2)], {
-        type: "application/json"
-    });
-    downloadFile(blob, "datos.json");
-};
-
-export const exportToCSV = (data) => {
-    const headers = Object.keys(data[0]).join(",");
-    const rows = data.map(obj =>
-        Object.values(obj).join(",")
+export const exportToJSON = (playlist) => {
+    const blob = new Blob(
+        [JSON.stringify(playlist, null, 2)],
+        { type: "application/json" }
     );
 
-    const csv = [headers, ...rows].join("\n");
-
-    const blob = new Blob([csv], { type: "text/csv" });
-    downloadFile(blob, "datos.csv");
+    downloadFile(blob, `${playlist.name}.json`);
 };
 
-export const exportToXML = (data) => {
-    let xml = "<playlists>";
+export const exportToCSV = (playlist) => {
+    const headers = ["id", "title", "autor", "album", "img", "duration"];
 
-    data.forEach(item => {
-        xml += "<playlist>";
-        Object.keys(item).forEach(key => {
-            xml += `<${key}>${item[key]}</${key}>`;
-        });
-        xml += "</playlist>";
+    const rows = playlist.songs.map(song =>
+        [song.id, song.title, song.autor, song.album, song.img, song.duration].join(",")
+    );
+
+    const csv = [headers.join(","), ...rows].join("\n");
+
+    const blob = new Blob([csv], { type: "text/csv" });
+    downloadFile(blob, `${playlist.name}.csv`);
+};
+
+export const exportToXML = (playlist) => {
+    let xml = `<playlist><name>${playlist.name}</name><songs>`;
+
+    playlist.songs.forEach(song => {
+        xml += `
+        <song>
+            <id>${song.id}</id>
+            <title>${song.title}</title>
+            <autor>${song.autor}</autor>
+            <album>${song.album}</album>
+            <img>${song.img}</img>
+            <duration>${song.duration}</duration>
+        </song>`;
     });
 
-    xml += "</playlists>";
+    xml += "</songs></playlist>";
 
     const blob = new Blob([xml], { type: "application/xml" });
-    downloadFile(blob, "datos.xml");
+    downloadFile(blob, `${playlist.name}.xml`);
 };
 
 const downloadFile = (blob, filename) => {
@@ -56,49 +63,33 @@ export const importFromJSON = (text) => {
 };
 
 export const importFromCSV = (text) => {
-    const lines = text.split("\n");
-    const headers = lines[0].split(",");
+    const lines = text.split("\n").slice(1);
 
-    return lines.slice(1).map(line => {
-        const values = line.split(",");
-        let obj = {};
-        headers.forEach((h, i) => {
-            obj[h] = values[i];
-        });
-        return obj;
+    const songs = lines.map(line => {
+        const [id, title, autor, album, img, duration] = line.split(",");
+        return { id, title, autor, album, img, duration };
     });
+
+    return {
+        name: "Import CSV",
+        songs
+    };
 };
 
 export const importFromXML = (text) => {
     const parser = new DOMParser();
     const xml = parser.parseFromString(text, "text/xml");
 
-    const items = xml.getElementsByTagName("playlist");
+    const name = xml.getElementsByTagName("name")[0]?.textContent || "Import XML";
 
-    return Array.from(items).map(item => {
-        let obj = {};
-        Array.from(item.children).forEach(child => {
-            obj[child.tagName] = child.textContent;
-        });
-        return obj;
-    });
-};
+    const songs = [...xml.getElementsByTagName("song")].map(s => ({
+        id: s.getElementsByTagName("id")[0]?.textContent,
+        title: s.getElementsByTagName("title")[0]?.textContent,
+        autor: s.getElementsByTagName("autor")[0]?.textContent,
+        album: s.getElementsByTagName("album")[0]?.textContent,
+        img: s.getElementsByTagName("img")[0]?.textContent,
+        duration: s.getElementsByTagName("duration")[0]?.textContent
+    }));
 
-const handleImport = async (file) => {
-    const text = await readFile(file);
-
-    let data = [];
-
-    if (file.name.endsWith(".json")) {
-        data = importFromJSON(text);
-    } else if (file.name.endsWith(".csv")) {
-        data = importFromCSV(text);
-    } else if (file.name.endsWith(".xml")) {
-        data = importFromXML(text);
-    }
-
-    // GUARDAR EN FIREBASE
-    for (let item of data) {
-        await addPlaylist(item);
-    }
+    return { name, songs };
 };
