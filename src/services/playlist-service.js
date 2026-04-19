@@ -1,16 +1,42 @@
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
 import { db } from "../firebase";
 
-const COLLECTION = "playlists";
-
-export const getPlaylists = async () => {
-    const snapshot = await getDocs(collection(db, COLLECTION));
-    return snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-    }));
+export const createPlaylist = async (name) => {
+    return await addDoc(collection(db, "playlists"), {
+        name,
+        songs: [],
+        createdAt: new Date()
+    });
 };
 
-export const addPlaylist = async (playlist) => {
-    return await addDoc(collection(db, COLLECTION), playlist);
+export const addOrUpdateSongInPlaylist = async (playlistId, song) => {
+    try {
+        const ref = doc(db, "playlists", playlistId);
+
+        const snapshot = await getDoc(ref);
+        const data = snapshot.data();
+
+        const currentSongs = data.songs || [];
+
+        const index = currentSongs.findIndex(s => s.id === song.id);
+
+        let updatedSongs;
+
+        if (index !== -1) {
+            updatedSongs = [...currentSongs];
+            updatedSongs[index] = {
+                ...updatedSongs[index],
+                ...song
+            };
+        } else {
+            updatedSongs = [...currentSongs, song];
+        }
+
+        await updateDoc(ref, {
+            songs: updatedSongs
+        });
+
+    } catch (error) {
+        console.error("Error añadiendo/actualizando canción:", error);
+    }
 };

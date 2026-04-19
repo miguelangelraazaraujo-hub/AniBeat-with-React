@@ -11,6 +11,7 @@ import Cookies from './pages/cookies/Cookies';
 import SaleConditions from './pages/sale-conditions/SaleConditions';
 import Rss from './pages/rss/Rss';
 import Forum from "./pages/forum/Forum";
+import Songs from "./pages/songs/Songs";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,6 +30,7 @@ function App() {
           <Route path="/news/:id" element={<NewsDetail />} />
           <Route path="/rss" element={<Rss />} />
           <Route path="/forum" element={<Forum />} />
+          <Route path="/songs" element={<Songs />} />
         </Routes>
       </BrowserRouter>
     </>

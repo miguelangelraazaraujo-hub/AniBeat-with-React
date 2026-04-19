@@ -1,0 +1,195 @@
+.songs-page {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.create-playlist-btn {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: hsl(var(--hsl-b3));
+    color: white;
+    transition: 0.3s;
+}
+
+.create-playlist-btn:hover {
+    transform: scale(1.05);
+}
+
+.songs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.song-card {
+    background: hsl(var(--hsl-b5));
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.song-card:hover {
+    transform: translateY(-5px);
+}
+
+.song-image-wrapper img {
+    width: 100%;
+    /* height: 140px; */
+    object-fit: fill;
+}
+
+.song-info {
+    padding: 0.8rem;
+}
+
+.song-select {
+    margin: 0.5rem;
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+}
+
+.playlist-card {
+    background: hsl(var(--hsl-b5));
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+}
+
+.playlist-card:hover {
+    transform: scale(1.02);
+}
+
+.playlist-songs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.playlist-song-row {
+    display: flex;
+    align-items: center;
+    background: hsl(var(--hsl-b4));
+    padding: 8px 10px;
+    border-radius: 6px;
+    gap: 12px;
+    transition: all 0.2s ease;
+}
+
+.playlist-song-row:hover {
+    background: hsl(var(--hsl-b3));
+    transform: scale(1.01);
+}
+
+.playlist-song-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.playlist-song-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.playlist-song-title {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.playlist-song-autor {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+.playlist-song-duration {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.empty {
+    opacity: 0.6;
+    font-style: italic;
+}
+
+.songs-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+/* MODAL */
+.songs-modal {
+    background: hsl(var(--hsl-b4));
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    animation: scaleIn 0.3s ease;
+}
+
+/* BOTÓN CERRAR */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* INPUT */
+.songs-modal input {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

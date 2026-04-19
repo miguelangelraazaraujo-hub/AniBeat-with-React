@@ -90,7 +90,7 @@ function Footer() {
                             <div className="footer-grid-column">
                                 <h3 className="footer-grid-title"><a href="/songs" className="footer-grid-title">{t('canciones')}</a></h3>
                                 <ul className="footer-grid-links">
-                                    <li><a href="/songs-list" className="footer-grid-link">{t('lista-canciones')}</a></li>
+                                    <li><a href="/songs" className="footer-grid-link">{t('lista-canciones')}</a></li>
                                     <li><a href="/artists" className="footer-grid-link">{t('artistas-destacados')}</a></li>
                                     <li><a href="/library" className="footer-grid-link">{t('mi-biblioteca')}</a></li>
                                 </ul>
