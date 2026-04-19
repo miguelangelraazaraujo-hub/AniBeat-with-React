@@ -3,13 +3,16 @@ import Header from "../../components/header/Header"
 import HeaderMobile from "../../components/header-mobile/HeaderMobile"
 import Footer from "../../components/footer/Footer"
 import { useEffect, useState } from "react";
-import { createPlaylist, addOrUpdateSongInPlaylist, handleImport } from "../../services/playlist-service";
-import { onSnapshot, collection } from "firebase/firestore";
+import { createPlaylist, addOrUpdateSongInPlaylist } from "../../services/playlist-service";
+import { doc, updateDoc, onSnapshot, collection } from "firebase/firestore";
 import { db } from "../../firebase";
 import {
     exportToJSON,
     exportToCSV,
-    exportToXML
+    exportToXML,
+    exportToXLSX,
+    exportToODS,
+    handleImport
 } from "../../services/import-export-service";
 
 function Songs() {
@@ -75,6 +78,30 @@ function Songs() {
         }
     };
 
+    const onImportFile = async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const playlist = await handleImport(file);
+
+        if (!playlist || !playlist.songs) {
+            alert("Archivo inválido");
+            return;
+        }
+
+        const isValid =
+            Array.isArray(playlist.songs) &&
+            playlist.songs.every(s => s.title && s.autor);
+
+        if (!isValid) {
+            alert("Datos incorrectos");
+            return;
+        }
+
+        await createPlaylist(playlist.name);
+
+    };
+
     return (
         <>
             <Header />
@@ -130,8 +157,8 @@ function Songs() {
                     <input
                         className="import-input"
                         type="file"
-                        accept=".json,.csv,.xml"
-                        onChange={handleImport}
+                        accept=".json,.csv,.xml,.xlsx,.ods"
+                        onChange={onImportFile}
                     />
                 </div>
 
@@ -143,6 +170,8 @@ function Songs() {
                                 <button className="playlist-action-btn" onClick={() => exportToJSON(pl)}>JSON</button>
                                 <button className="playlist-action-btn" onClick={() => exportToCSV(pl)}>CSV</button>
                                 <button className="playlist-action-btn" onClick={() => exportToXML(pl)}>XML</button>
+                                <button className="playlist-action-btn" onClick={() => exportToXLSX(pl)}>XLSX</button>
+                                <button className="playlist-action-btn" onClick={() => exportToODS(pl)}>ODS</button>
                             </div>
 
                             <div className="playlist-songs">
