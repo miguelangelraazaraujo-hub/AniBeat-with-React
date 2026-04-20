@@ -98,7 +98,11 @@ function Songs() {
             return;
         }
 
-        await createPlaylist(playlist.name);
+        const newPlaylistRef = await createPlaylist(playlist.name);
+
+        await updateDoc(doc(db, "playlists", newPlaylistRef.id), {
+            songs: playlist.songs
+        });
 
     };
 

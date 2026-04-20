@@ -73,6 +73,15 @@ const downloadFile = (blob, filename) => {
     a.click();
 };
 
+export const readFile = (file) => {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (e) => resolve(e.target.result);
+        reader.onerror = reject;
+        reader.readAsText(file);
+    });
+};
+
 export const readSpreadsheetFile = (file) => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -148,15 +157,15 @@ export const handleImport = async (file) => {
     let data;
 
     if (file.name.endsWith(".json")) {
-        const text = await readSpreadsheetFile(file);
+        const text = await readFile(file);
         data = importFromJSON(text);
 
     } else if (file.name.endsWith(".csv")) {
-        const text = await readSpreadsheetFile(file);
+        const text = await readFile(file);
         data = importFromCSV(text);
 
     } else if (file.name.endsWith(".xml")) {
-        const text = await readSpreadsheetFile(file);
+        const text = await readFile(file);
         data = importFromXML(text);
 
     } else if (file.name.endsWith(".xlsx") || file.name.endsWith(".ods")) {
