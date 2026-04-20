@@ -137,18 +137,22 @@ Below is a screenshot showing the RSS feed opened in Feedly and displaying the n
 ![RSS Viewer Screenshot](./screeshots/rss-viewer-screenshot.png)
 
 ## Import/Export Functionality
-AniBeat now supports importing and exporting playlist data in multiple formats: JSON, CSV, and XML. This allows users to back up their playlists or transfer them between accounts.
+AniBeat now supports importing and exporting playlist data in multiple formats: JSON, CSV, XML, XLSX and ODS. This allows users to back up their playlists or transfer them between accounts.
 
 ### Supported Formats
 - JSON (.json)
 - CSV (.csv)
 - XML (.xml)
+- XLSX (.xlsx)
+- ODS (.ods)
 
 ### Export
 Each playlist can be exported individually using the available buttons in the UI:
 - Export to JSON
 - Export to CSV
 - Export to XML
+- Export to XLSX
+- Export to ODS
 
 ### Import
 Users can import playlists using the file input available in the playlists section. The application will:
@@ -161,11 +165,15 @@ You can test the import functionality using the following sample files included 
 - JSON: /Data.json
 - XML: /Data.xml
 - CSV: /Data.csv
+- XLSX: /Data.xlsx
+- ODS: /Data.ods
 
 When the project is deployed, these files are accessible via:
 - [Data.json](https://anibeat-with-react.web.app/Data.json)
 - [Data.xml](https://anibeat-with-react.web.app/Data.xml)
 - [Data.csv](https://anibeat-with-react.web.app/Data.csv)
+- [Data.xlsx](https://anibeat-with-react.web.app/Data.xlsx)
+- [Data.ods](https://anibeat-with-react.web.app/Data.ods)
 
 ### Contact
 Have questions or want to collaborate? Reach out!
