@@ -15,6 +15,10 @@ import Songs from "./pages/songs/Songs";
 
 function App() {
 
+const prueba = "AniBeat";
+
+console.log("Prueba ESLint");
+
   return (
     <>
       <BrowserRouter>
