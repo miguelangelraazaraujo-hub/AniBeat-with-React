@@ -1,29 +1,38 @@
 import js from "@eslint/js";
 import globals from "globals";
-import pluginReact from "eslint-plugin-react";
-import json from "@eslint/json";
-import markdown from "@eslint/markdown";
-import css from "@eslint/css";
-import { defineConfig } from "eslint/config";
-
 import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
+import { defineConfig } from "eslint/config";
 
 export default defineConfig([
   {
-    ignores: ["dist", "node_modules"],//borrar
+    ignores: [
+      "dist/**",
+      "node_modules/**",
+      "package-lock.json",
+      "package.json",
+      "public/**",
+      "README.md",
+      "vite.config.js",
+    ],
   },
   {
-    files: ["**/*.{js,mjs,cjs,jsx}"],
+    files: ["src/**/*.{js,jsx}"],
+    extends: [
+      react.configs.flat.recommended,
+    ],
     plugins: {
-      js,
-      react, //borrar
-      "react-hooks": reactHooks, //borrar
-      "react-refresh": reactRefresh, //borrar
+      react,
     },
-    extends: ["js/recommended"],
-    languageOptions: { globals: { ...globals.browser, ...globals.node } },
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: { ...globals.browser, ...globals.node }
+    },
     settings: {
       react: {
         version: "detect",
@@ -31,55 +40,24 @@ export default defineConfig([
     },
 
     rules: {
-      ...reactHooks.configs['recommended-latest'].rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        {
-          allowConstantExport: true,
-        },
-      ],
-
+      ...js.configs.recommended.rules,
       // Prueba 1: variables no utilizadas
       "no-unused-vars": "error",
 
       // Prueba 2: console.log
       "no-console": "error",
 
-      // Prueba 3: dependencias de useEffect
-      "react-hooks/exhaustive-deps": "error",
+      // Prueba 3: JSX no definido
+      "react/jsx-no-undef": "error",
 
       // Prueba 4: validación de props
       "react/prop-types": "error",
+
+      // Prueba 5: comparaciones estrictas
+      "eqeqeq": "error",
 
       // Recomendable en React
       "react/react-in-jsx-scope": "off",
     },
   },
-  pluginReact.configs.flat.recommended,
-  {
-    files: ["**/*.json"],
-    plugins: { json },
-    language: "json/json",
-    extends: ["json/recommended"]
-  },
-  {
-    files: ["**/*.json5"],
-    plugins: { json },
-    language: "json/json5",
-    extends: ["json/recommended"]
-  },
-  {
-    files: ["**/*.md"],
-    plugins: { markdown },
-    language: "markdown/commonmark",
-    extends: ["markdown/recommended"]
-  },
-  {
-    files: ["**/*.css"],
-    plugins: { css },
-    language: "css/css",
-    extends: ["css/recommended"]
-  },
-
-
 ]);
