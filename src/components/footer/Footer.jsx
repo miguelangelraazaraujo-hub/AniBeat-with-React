@@ -1,3 +1,4 @@
+import React from "react";
 import "./Footer.css";
 import Map from '../map/Map';
 import { Link } from 'react-router-dom';

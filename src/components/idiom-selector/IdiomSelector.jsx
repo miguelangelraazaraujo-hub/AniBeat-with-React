@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './IdiomSelector.css';
 
-const IdiomSelector = ({ isMobile = false }) => {
+const IdiomSelector = ({
+  // PropTypes: {
+  //   isMobile: PropTypes.boolean.isRequired,
+  // },
+  isMobile = false }) => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 

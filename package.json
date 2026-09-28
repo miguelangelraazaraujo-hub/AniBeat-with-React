@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "node scripts/generate-rss.js && vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "preview": "vite preview",
     "generate:rss": "node scripts/generate-rss.js"
   },
@@ -23,11 +24,15 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
+    "@eslint/css": "^2.0.0",
+    "@eslint/js": "^9.39.5",
+    "@eslint/json": "^2.1.0",
+    "@eslint/markdown": "^8.0.3",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^4.2.2",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'leaflet/dist/leaflet.css';
 import './i18n'
@@ -14,7 +14,6 @@ import Forum from "./pages/forum/Forum";
 import Songs from "./pages/songs/Songs";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
