@@ -12,7 +12,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 
 export default defineConfig([
   {
-    ignores: ["dist"],//borrar
+    ignores: ["dist", "node_modules"],//borrar
   },
   {
     files: ["**/*.{js,mjs,cjs,jsx}"],
@@ -31,6 +31,14 @@ export default defineConfig([
     },
 
     rules: {
+      ...reactHooks.configs['recommended-latest'].rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        {
+          allowConstantExport: true,
+        },
+      ],
+
       // Prueba 1: variables no utilizadas
       "no-unused-vars": "error",
 
